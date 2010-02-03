@@ -1,0 +1,234 @@
+html{
+	background: #fff;
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	font: 78% "trebuchet MS";
+	padding: 38px 5px 5px 5px;
+	text-align: left;
+	overflow-y: auto;
+}
+img{
+	border: 0;
+	vertical-align: middle;
+}
+a{
+	outline: none;
+	text-decoration: none;
+	color: #000;
+}
+a:hover{
+	text-decoration: underline;
+	color: #9ea900;
+}
+h1{
+	font-size: 1.2em;
+	font-weight: bolder;
+	letter-spacing: 1px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	background: #EEE top left repeat-x;
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+h2{
+	text-transform: uppercase;
+	font-size: 1.2em;
+	font-weight: lighter;
+	letter-spacing: 1px;
+	color: #9ea900;
+	padding-bottom: 5px;
+}
+h3{
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: lighter;
+	letter-spacing: 1px;
+	color: #9ea900;
+	padding-bottom: 5px;
+}
+h4{
+	padding-left: 20px;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	font-weight: lighter;
+	letter-spacing: 1px;
+	color: #9ea900;
+	padding-bottom: 10px;
+}
+.toolbar{
+	position: absolute;
+	top: 2px; 
+	left: 10px;
+}
+.toolbar div{
+	display: block;
+	float: left;
+	cursor: pointer;
+	height: 18px;
+	background: url(/media/backoffice/bg-dash-title.png) #ccc top left repeat-x;
+	color: #333;
+	font-weight: bold;
+	padding: 3px 5px;
+	margin-right: 7px;
+	-moz-border-radius: 6px!important;
+	border: 1px solid #aaa;
+}
+.toolbar div:hover{
+	border: 1px solid #fff;
+}
+
+div.dashboard-widget ul{
+	list-style: square;
+	padding-left: 20px;
+}
+div.dashboard-widget ul.no-bullet{
+	list-style: none;
+	padding-left: 0px;
+	padding-top: 0px;
+}
+div.dashboard-widget ul li{
+	font-size: 1em;
+	line-height: 13px;
+	padding: 2px;
+}
+div.dashboard-widget ul li span{
+	padding-bottom: 3px;
+	font-size: 0.8em;
+	color: #666666;
+	text-transform: uppercase;
+}
+a.contextual-action{
+	margin: 0 0 0 10px;
+}
+div.dashboard-widget ul li a.contextual-action{
+	display: none;
+}
+div.dashboard-widget ul li:hover{
+	background-color: whitesmoke;
+}
+div.dashboard-widget ul li:hover a.contextual-action{
+	display: inline;
+}
+.dashboard-widget{
+	margin: 5px;
+}
+.dashboard-widget .title-bar{
+	height: 18px;
+	background: url(/media/backoffice/bg-dash-title.png) #ccc top left repeat-x;
+	color: #333;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	padding: 4px 5px;
+	-moz-border-radius-topleft: 6px!important;
+	-moz-border-radius-topright: 6px!important;
+	border: 1px solid #aaa;
+	overflow-x: hidden;
+	white-space: nowrap;
+}
+.dashboard-widget .title-bar .icon{
+	float: left;
+}
+.dashboard-widget .title-bar>img{
+	float: left;
+	display: block;
+	margin-right: 5px;
+}
+.dashboard-widget .title-bar .title{
+	padding-left: 5px;
+	float: left;
+}
+.dashboard-widget .title-bar .buttons-bar{
+	float: right;
+}
+.dashboard-widget .title-bar .buttons-bar .button{
+	padding: 0px 2px;
+}
+.dashboard-widget .content-block{
+	padding: 3px 3px 5px 3px;
+	max-height: 350px;
+	min-height: 20px;
+	overflow: auto;
+	border: 1px solid #aaa;
+	-moz-border-radius-bottomleft: 6px!important;
+	-moz-border-radius-bottomright: 6px!important;
+	border-top: none;
+	background: url(/media/backoffice/headerbg.gif) repeat-x bottom;
+}
+.dashboard-widget .content{
+	width: 100%;
+	padding: 0px;
+}
+div.dashboard-widget ul.dash-module-big{
+	list-style: none;
+	padding-left: 0px;
+}
+div.dashboard-widget p.dash-module-big{
+	font-size: 1.2em;
+	padding: 0 10px 0px 15px;
+}
+div.dashboard-widget ul.dash-module-big li{
+	font-size: 1.2em;
+	padding: 4px 10px 4px 10px;
+}
+div.dashboard-widget ul.dash-module-small{
+	list-style: none;
+	overflow: auto;
+	max-height: 200px;
+	padding: 0px;
+}
+div.dashboard-widget ul.dash-module-small li{
+	font-size: 1em;
+	padding: 4px 10px 4px 20px;
+}
+.clickable{
+	cursor: pointer;
+}
+
+/** Table styles. */
+div.dashboard-widget tbody tr.even{
+	background-color: whitesmoke;
+}
+div.dashboard-widget tbody tr.error{
+	color: red;
+	font-weight: bold;
+}
+div.dashboard-widget tbody tr:hover{
+	background-color: #ddd;
+}
+div.dashboard-widget table{
+	width: 100%;
+}
+div.dashboard-widget th{
+	font-weight: bold;
+}
+div.dashboard-widget td{
+	padding: 2px 5px;
+}
+
+/** Locate document links */ 
+div.dashboard-widget a.locate-document-link{
+	display: inline-block;
+	min-height: 16px;
+	padding-right: 20px;
+	background: url(/icons/small/view.png) center right no-repeat;
+	cursor: pointer;
+}
+
+/** Note block */
+.modules-dashboard-DashboardNote .content-block>div{
+	margin: 4px 4px 4px 0;
+}
+.modules-dashboard-DashboardNote textarea{
+	width: 100%;
+	border: none;
+}
+
+@import url(/modules/dashboard/style/dashboard.!xul.all.css);
+@import url(/modules/dashboard/style/dashboard.xul.all.css);

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<blocks>
+	<block type="modules_dashboard_shortcut" display="" icon="modules" dashboard="true" label="&amp;modules.dashboard.bo.blocks.Shortcut;">
+		<parameters>
+			<parameter name="blocktitle" type="String" default-value="Modules" />
+			<parameter name="modules" type="String" fieldtype="checklist" list-id="modules_dashboard/availablemodules" min-occurs="1" max-occurs="-1" />
+		</parameters>
+	</block>
+	<block type="modules_dashboard_packagesversion" display="" icon="modules" dashboard="true" label="&amp;modules.dashboard.bo.blocks.Packagesversion;" />
+	<block type="modules_dashboard_browsersversion" display="" icon="browser" dashboard="true" label="&amp;modules.dashboard.bo.blocks.Browsersversion;" />
+	<block type="modules_dashboard_tools" display="" icon="admin" dashboard="true" label="&amp;modules.dashboard.bo.blocks.Tools;">
+		<parameters>
+			<parameter name="showawstatslink" type="Boolean" default-value="false" />
+			<parameter name="showgoogleanalyticslink" type="Boolean" default-value="true" />
+		</parameters>
+	</block>
+	<block type="modules_dashboard_DashboardRssReader" display="" icon="rss" dashboard="true" label="&amp;modules.dashboard.bo.blocks.DashboardRssReader.Title;">
+		<parameters>
+			<parameter name="feedurl" type="String" min-occurs="1" />
+			<parameter name="maxitemcount" type="Integer" default-value="10" min-occurs="1">
+				<constraints>min:1;max:50</constraints>
+			</parameter>
+		</parameters>
+	</block>
+	<block type="empty" dashboard="true" display="" icon="selection" label="&amp;modules.uixul.bo.layout.EmptyBlock;" />
+	<block type="layout" dashboard="true" columns="2" display="" requiresNewEditor="true" icon="window_split_hor" label="&amp;modules.website.bo.blocks.Two-col;" />
+	<!-- Deprecated. -->
+	<block type="modules_dashboard_moduledefault" display="" icon="earth_view" hidden="true" dashboard="true"
+		label="&amp;modules.dashboard.bo.blocks.Moduledefault;">
+		<parameters>
+			<parameter name="package" type="String" list-id="modules_dashboard/moduledashboard" />
+		</parameters>
+	</block>
+	<block type="modules_dashboard_DashboardNote" display="" icon="note" dashboard="true" label="&amp;modules.dashboard.bo.blocks.DashboardNote.Title;">
+		<parameters>
+			<parameter name="fieldrows" type="Integer" default-value="5" min-occurs="1">
+				<constraints>min:2;max:20</constraints>
+			</parameter>
+		</parameters>
+	</block>
+</blocks>

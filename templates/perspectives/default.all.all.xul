@@ -1,0 +1,26 @@
+<hbox flex="1">
+	<deck anonid="pageDeck" flex="1" selectedIndex="0">
+		<hbox flex="1">
+			<iframe anonid="dashboard_frame" src="about:blank" flex="1" />
+		</hbox>
+		<hbox flex="1">
+			<iframe anonid="designDasboardFrame" src="about:blank" flex="1" />
+			<splitter anonid="propertyGridContainerSplitter" hidden="true" />
+			<wpropertygridcontainer id="propertyGridContainer" anonid="propertyGridContainer" style="max-width:280px" collapsed="true" />
+		</hbox>
+		<hbox flex="1"><spacer flex="1"/></hbox>
+        <hbox flex="1" >
+        	<vbox flex="1" pack="center" style="background-color:white; opacity:0.7">
+        		<spacer flex="1"/>
+        		<hbox pack="center">
+       					<image change:image="loading_40.gif" height="40px" width="40px"/>
+        		</hbox>
+        		<separator height="16px"/>
+        		<hbox pack="center">
+       				<description style="font-size:18px" i18n:attributes="value &amp;modules.website.bo.general.PageEditorLoadingEllipsis;"/>
+        		</hbox>
+        		<spacer flex="1"/>
+        	</vbox>
+        </hbox>
+     </deck>
+</hbox>

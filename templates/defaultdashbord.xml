@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<change:contents xmlns:change="http://www.rbs.fr/change/1.0/schema">
+	<change:content id="content-block">
+		<change:layout>
+			<change:col widthPercentage="30">
+				<change:row>
+					<change:block type="modules_dashboard_DashboardNote" />
+				</change:row>
+				<change:row>
+					<change:block type="modules_dashboard_shortcut" __modules="website,media" />
+				</change:row>
+				<change:row>
+					<change:block type="modules_dashboard_browsersversion"/>
+				</change:row>
+				<change:row>
+					<change:block type="modules_dashboard_tools"/>
+				</change:row>
+			</change:col>
+			<change:col widthPercentage="70">
+				<change:row>
+					<change:block type="modules_dashboard_DashboardRssReader" __feedurl="http://www.rbschange.fr/rbs-change-product-feed.xml" />
+				</change:row>
+				<change:row>
+					<change:block type="modules_website_DashboardLastModifiedPages" />
+				</change:row>
+				<change:row>
+					<change:block type="modules_task_DashboardPendingTasks" />
+				</change:row>
+				<change:row>
+					<change:block type="modules_users_DashboardConnectedUsers" />
+				</change:row>
+			</change:col>
+		</change:layout>
+	</change:content>
+</change:contents>

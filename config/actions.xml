@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<actions extends="generic">
+	<action name="closeModuleAction" label="&amp;modules.uixul.bo.general.buttons.Close-module;" icon="error" hasSeparator="true">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			this.closeModule();
+		]]></body>
+		<checkDisplay><![CDATA[
+			return false;
+		]]></checkDisplay>
+	</action>
+
+	<action name="refreshDashboard" label="&amp;modules.uixul.bo.general.Refresh;" icon="refresh">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			try
+			{
+				var wrpcontent = new XPCNativeWrapper(this.getElementById('dashboard_frame').contentWindow).wrappedJSObject;
+	   			wrpcontent.Dashboard.refresh();
+		    }
+		    catch (e)
+		    {
+		    	wCore.error('refresh', [], e);
+		    }
+		]]></body>
+	</action>
+
+	<action name="editDashboard" label="&amp;modules.dashboard.bo.general.Edit;" icon="edit">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+	    	wCore.debug('dashboard.editDashboard');
+	    	var oldUrl = this.getElementById('designDasboardFrame').getAttribute("src");
+	    	
+	    	editUrl = wToolkit.buildXulURL('dashboard', 'EditContent', {}, true);
+	    	var deck = this.getElementById('pageDeck');
+			if (editUrl != oldUrl)
+			{
+				deck.selectedIndex = 3;
+				this.getElementById('designDasboardFrame').setAttribute("src", editUrl);
+			}
+			else
+			{
+				deck.selectedIndex = 1;
+			}
+			this.getElementById('dashboard_frame').setAttribute("src", "about:blank");
+		]]></body>
+	</action>
+
+	<action name="onModuleInit" label="Init">
+		<body><![CDATA[
+			try
+			{	
+				wCore.debug('dashboard.onModuleInit');
+				var oldUrl = this.getElementById('dashboard_frame').getAttribute("src");
+				
+				wCore.debug('dashboard.onModuleInit oldurl :' + oldUrl);
+				var dashboardRegularUrl = wToolkit.buildXulURL('dashboard', 'Dashboard', {}, 'html');
+				
+				wCore.debug('dashboard.onModuleInit RegularUrl :' + dashboardRegularUrl);
+				if (oldUrl != dashboardRegularUrl)
+				{	
+					wCore.debug('dashboard.onModuleInit setSrc' + dashboardRegularUrl);	    
+			    	this.getElementById('dashboard_frame').setAttribute("src", dashboardRegularUrl);
+			    }
+			    
+				var deck = this.getElementById('pageDeck');
+				wCore.debug('dashboard.onModuleInit deck');
+				
+				deck.selectedIndex = 0;
+				wCore.debug('dashboard.onModuleInit selectedIndex');
+			
+		    }
+		    catch (e)
+		    {
+		    	wCore.error('onModuleInit', [], e);
+		    }
+		]]></body>
+	</action>
+
+	<action name="onLoadAction" label="onLoadAction">
+		<body><![CDATA[
+			wCore.debug('dashboard.onLoadAction');
+			this.onModuleInit();
+		]]></body>
+	</action>
+
+	<action name="refreshRscTree" label="">
+		<body><![CDATA[
+			wCore.debug('refreshRscTree : dashboard has no tree');
+		]]></body>
+	</action>
+
+	<action name="onSwitchFrom" label="">
+		<parameter name="fromModule" />
+		<body><![CDATA[
+			wCore.debug('onSwitchFrom : ' + fromModule);
+			this.refreshDashboard();
+		]]></body>
+	</action>
+</actions>

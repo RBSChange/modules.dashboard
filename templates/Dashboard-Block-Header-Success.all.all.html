@@ -1,0 +1,9 @@
+<h1>${username}</h1>
+<div class="toolbar">
+	<div onclick="parent.window.getModuleByName('dashboard').editDashboard();">
+		<img change:icon="edit/small" /> <tal:block change:translate="&modules.dashboard.bo.blocks.header.Edit;" />
+	</div>
+	<div onclick="refresh();">
+		<img change:icon="refresh/small" /> <tal:block change:translate="&modules.dashboard.bo.blocks.header.Refresh;" />
+	</div>
+</div>

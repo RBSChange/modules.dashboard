@@ -1,0 +1,11 @@
+<div class="dashboard-widget" static="true">
+	<div class="title-bar">
+		<div change:include="module 'dashboard'; template 'Dashboard-Inc-MiniButtonsBar'; type 'html'" />
+		<img change:icon="modules/small" /> <tal:block change:translate="&modules.dashboard.bo.blocks.Packagesversion;" />
+	</div>
+	<div class="content-block">
+	    <ul class="dash-module-small">
+			<li tal:repeat="version packageVersion">${repeat/version/key} : ${version}</li>
+		</ul>
+	</div>
+</div>

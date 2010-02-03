@@ -1,0 +1,14 @@
+<div class="dashboard-widget" static="true">
+	<div class="title-bar">
+		<div change:include="module 'dashboard'; template 'Dashboard-Inc-MiniButtonsBar'; type 'html'" />
+		<img change:icon="modules/small"/> ${title}
+	</div>
+	<div class="content-block">
+		<ul>
+			<li tal:repeat="module modules">
+				<img src="${UIHOST}/icons/small/${module/getIconName}.png" />
+				<a href="javascript:;" onclick="loadModule('${module/getName}');">${module/getUILabel}</a>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#content-block, #content-block>div{
+	overflow-y: auto;
+}
+/** 
+ * This "hack" is to homogenize left and right dashboard margins. In the generic page rendering,
+ * to be compatible with IE, columns total width is only 99%...
+ */
+body{
+	margin-right: -1%;
+}
+html{
+	overflow-x: hidden;
+}

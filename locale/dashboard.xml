@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <entity id="refresh">
+    <locale lang="fr">rafraîchir</locale>
+    <locale lang="en">refresh</locale>
+    <locale lang="de">aktualisieren</locale>
+  </entity>
+  <entity id="gotomodule">
+    <locale lang="fr">ouvrir le module</locale>
+    <locale lang="en">open module</locale>
+    <locale lang="de">Modul öffnen</locale>
+  </entity>
+  <entity id="toggle">
+    <locale lang="fr">minimiser/maximiser</locale>
+    <locale lang="en">minimize/maximize</locale>
+    <locale lang="de">minimieren/maximieren</locale>
+  </entity>
+  <entity id="no-information-to-display">
+    <locale lang="fr">aucune information à afficher.</locale>
+    <locale lang="en">no information to display.</locale>
+    <locale lang="de">Keine Information anzuzeigen.</locale>
+  </entity>
+  <entity id="loading-in-progress">
+    <locale lang="fr">chargement en cours</locale>
+    <locale lang="en">loading in progress</locale>
+    <locale lang="en">Ladung, bitte warten.</locale>
+  </entity>
+  <entity id="loading-error">
+    <locale lang="fr">erreur de chargement</locale>
+    <locale lang="en">loading error</locale>
+    <locale lang="de">Fehler beim Laden</locale>
+  </entity>
+  <entity id="DummyContent">
+    <locale lang="fr">Le contenu de ce bloc n'est pas affichable en mode édition.</locale>
+    <locale lang="en">Dummy content</locale>
+    <locale lang="de">Der Inhalt dieses Blocks kann im Bearbeitungsmodus nicht angezeigt werden.</locale>
+  </entity>
+</localization>

@@ -1,0 +1,47 @@
+<div class="dashboard-widget" static="true">
+	<div class="title-bar">
+		<div change:include="module 'dashboard'; template 'Dashboard-Inc-MiniButtonsBar'; type 'html'" />
+		<img change:icon="browser/small" /> <tal:block change:translate="&amp;modules.dashboard.bo.blocks.Browsersversion;" />
+	</div>
+	<div class="content-block" tal:condition="not: browsers">
+	   <strong change:translate="&amp;modules.dashboard.bo.blocks.Unknowversion;">Les versions ne sont pas définies pour ce projet</strong>
+	</div>
+	<div class="content-block" tal:condition="browsers">
+		<div id="wrongVersion" style="display: none;" change:translate="&amp;modules.dashboard.bo.blocks.WrongVersion;">(Version courante NAVVERSION non validée)</div>
+		<strong change:translate="&amp;modules.dashboard.bo.blocks.Backofficetitle;">Pour l'interface d'administration</strong>
+		<strong id="currentVersion" style="color: red" />
+	    <ul class="dash-module-small">
+			<li tal:repeat="versions browsers/backoffice">
+				<span tal:replace="repeat/versions/key" /> :
+				<tal:block tal:repeat="version versions">
+					<strong id="ver_${version}">${version}</strong><span tal:condition="not: repeat/version/end">, </span> 
+				</tal:block>
+			</li>
+		</ul>
+		
+		<script type="text/javascript">
+			var preferencesService = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefService).getBranch("");
+			var navVersion =  preferencesService.getComplexValue('extensions.lastAppVersion', Components.interfaces.nsISupportsString).data;
+			var elem = document.getElementById("ver_" + navVersion);
+			if (elem != null)
+			{
+				elem.setAttribute('style', 'color: green;font-weight: bold;');
+			}
+			else
+			{
+				var text = '<br />' + document.getElementById("wrongVersion").innerHTML;
+				document.getElementById("currentVersion").innerHTML = text.replace(/NAVVERSION/, navVersion);
+			}
+		</script>
+		
+		<strong change:translate="&amp;modules.dashboard.bo.blocks.Frontofficetitle;">Pour le site web</strong>
+	    <ul class="dash-module-small">
+			<li tal:repeat="versions browsers/frontoffice">
+				<span tal:replace="repeat/versions/key" /> : 
+				<tal:block tal:repeat="version versions">
+					<strong>${version}</strong><span tal:condition="not: repeat/version/end">, </span> 
+				</tal:block>
+			</li>
+		</ul>
+	</div>
+</div>

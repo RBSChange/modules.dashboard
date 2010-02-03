@@ -1,0 +1,30 @@
+<div class="dashboard-widget" static="true">
+	<div class="title-bar">
+		<div change:include="module 'dashboard'; template 'Dashboard-Inc-MiniButtonsBar'; type 'html'" />
+		<img change:icon="admin/small" /> <tal:block change:translate="&modules.uixul.bo.general.Tools;" />
+	</div>
+	<div class="content-block">
+		<ul>
+		    <li>
+		    	<img src="${UIHOST}/icons/small/preferences.png" />
+		    	<a href="javascript:;" onclick="openPreferences();" change:translate="&modules.uixul.bo.actions.Preferences;" />
+		    </li>
+		    <li tal:condition="configuration/getShowawstatslink">
+		    	<img src="${UIHOST}/icons/small/statistics.png" />
+		    	<a href="javascript:;" onclick="loadStats();" change:translate="&modules.dashboard.bo.blocks.tools.Awstats;" />
+		    </li>
+		    <li tal:condition="configuration/getShowgoogleanalyticslink">
+		    	<img src="${UIHOST}/icons/small/statistics.png" />
+		    	<a href="http://www.google.com/analytics/" target="_blank" change:translate="&modules.dashboard.bo.blocks.tools.Google-analytics;" />
+		    </li>
+		    <li tal:condition="canEditLocale">
+		    	<img src="${UIHOST}/icons/small/edit-locales.png" />
+		    	<tal:block change:translate="&modules.dashboard.bo.blocks.tools.Edit-locale-forLabel;" />
+		    	<select name="package">
+		    		<option tal:repeat="package packages" value="${repeat/package/key}">${package}</option>
+		    	</select>
+		    	<img class="clickable" src="${UIHOST}/icons/small/edit.png" change:i18nattr="title &modules.dashboard.bo.blocks.tools.EditEllipsis;" onclick="var node = this; while(node.tagName != 'SELECT'){ node = node.previousSibling; }; editLocaleForModule(node.value);" />
+		    </li>
+		</ul>
+	</div>
+</div>
