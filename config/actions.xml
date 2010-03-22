@@ -31,7 +31,7 @@
 	    	wCore.debug('dashboard.editDashboard');
 	    	var oldUrl = this.getElementById('designDasboardFrame').getAttribute("src");
 	    	
-	    	editUrl = wToolkit.buildXulURL('dashboard', 'EditContent', {}, true);
+	    	editUrl = wToolkit.buildXulURL('dashboard', 'EditContent', {lang: Context.W_LANG, uilang: Context.W_UILANG}, true);
 	    	var deck = this.getElementById('pageDeck');
 			if (editUrl != oldUrl)
 			{
@@ -54,7 +54,7 @@
 				var oldUrl = this.getElementById('dashboard_frame').getAttribute("src");
 				
 				wCore.debug('dashboard.onModuleInit oldurl :' + oldUrl);
-				var dashboardRegularUrl = wToolkit.buildXulURL('dashboard', 'Dashboard', {}, 'html');
+				var dashboardRegularUrl = wToolkit.buildXulURL('dashboard', 'Dashboard', {lang: Context.W_LANG, uilang: Context.W_UILANG}, 'html');
 				
 				wCore.debug('dashboard.onModuleInit RegularUrl :' + dashboardRegularUrl);
 				if (oldUrl != dashboardRegularUrl)
