@@ -61,7 +61,7 @@ class dashboard_DashboardService
 	public function getTemporaryPageFromUser($user)
 	{
     	$content = $user->getDashboardcontent();
-    	if (empty($content))
+    	if (f_util_StringUtils::isEmpty($content))
     	{
     		$content = $this->getDefaultContent();
     	}

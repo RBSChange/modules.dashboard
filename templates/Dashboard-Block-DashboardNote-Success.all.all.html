@@ -3,7 +3,7 @@
 		<div change:include="module 'dashboard'; template 'Dashboard-Inc-MiniButtonsBar'; type 'html'" />
 		<img change:icon="src note/small" /> 
 		<tal:block tal:condition="title" tal:replace="title" />
-		<tal:block tal:condition="not: title" change:translate="&modules.dashboard.bo.blocks.DashboardNote.Title;" />
+		<tal:block tal:condition="not: title" change:translate="&modules.dashboard.bo.blocks.DashboardNote.Title; ui true" />
 	</div>
 	<div class="content-block">
 		<div>

@@ -1,25 +1,25 @@
 <div class="dashboard-widget" static="true">
 	<div class="title-bar">
 		<div change:include="module 'dashboard'; template 'Dashboard-Inc-MiniButtonsBar'; type 'html'" />
-		<img change:icon="admin/small" /> <tal:block change:translate="&modules.uixul.bo.general.Tools;" />
+		<img change:icon="admin/small" /> <tal:block change:translate="&modules.uixul.bo.general.Tools; ui true" />
 	</div>
 	<div class="content-block">
 		<ul>
 		    <li>
 		    	<img src="${UIHOST}/icons/small/preferences.png" />
-		    	<a href="javascript:;" onclick="openPreferences();" change:translate="&modules.uixul.bo.actions.Preferences;" />
+		    	<a href="javascript:;" onclick="openPreferences();" change:translate="&modules.uixul.bo.actions.Preferences; ui true" />
 		    </li>
 		    <li tal:condition="configuration/getShowawstatslink">
 		    	<img src="${UIHOST}/icons/small/statistics.png" />
-		    	<a href="javascript:;" onclick="loadStats();" change:translate="&modules.dashboard.bo.blocks.tools.Awstats;" />
+		    	<a href="javascript:;" onclick="loadStats();" change:translate="&modules.dashboard.bo.blocks.tools.Awstats; ui true" />
 		    </li>
 		    <li tal:condition="configuration/getShowgoogleanalyticslink">
 		    	<img src="${UIHOST}/icons/small/statistics.png" />
-		    	<a href="http://www.google.com/analytics/" target="_blank" change:translate="&modules.dashboard.bo.blocks.tools.Google-analytics;" />
+		    	<a href="http://www.google.com/analytics/" target="_blank" change:translate="&modules.dashboard.bo.blocks.tools.Google-analytics; ui true" />
 		    </li>
 		    <li tal:condition="canEditLocale">
 		    	<img src="${UIHOST}/icons/small/edit-locales.png" />
-		    	<tal:block change:translate="&modules.dashboard.bo.blocks.tools.Edit-locale-forLabel;" />
+		    	<tal:block change:translate="&modules.dashboard.bo.blocks.tools.Edit-locale-forLabel;  ui true" />
 		    	<select name="package">
 		    		<option tal:repeat="package packages" value="${repeat/package/key}">${package}</option>
 		    	</select>

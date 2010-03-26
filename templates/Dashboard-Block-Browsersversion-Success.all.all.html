@@ -1,14 +1,14 @@
 <div class="dashboard-widget" static="true">
 	<div class="title-bar">
 		<div change:include="module 'dashboard'; template 'Dashboard-Inc-MiniButtonsBar'; type 'html'" />
-		<img change:icon="browser/small" /> <tal:block change:translate="&amp;modules.dashboard.bo.blocks.Browsersversion;" />
+		<img change:icon="browser/small" /> <tal:block change:translate="&amp;modules.dashboard.bo.blocks.Browsersversion; ui true" />
 	</div>
 	<div class="content-block" tal:condition="not: browsers">
-	   <strong change:translate="&amp;modules.dashboard.bo.blocks.Unknowversion;">Les versions ne sont pas définies pour ce projet</strong>
+	   <strong change:translate="&amp;modules.dashboard.bo.blocks.Unknowversion; ui true">Les versions ne sont pas définies pour ce projet</strong>
 	</div>
 	<div class="content-block" tal:condition="browsers">
-		<div id="wrongVersion" style="display: none;" change:translate="&amp;modules.dashboard.bo.blocks.WrongVersion;">(Version courante NAVVERSION non validée)</div>
-		<strong change:translate="&amp;modules.dashboard.bo.blocks.Backofficetitle;">Pour l'interface d'administration</strong>
+		<div id="wrongVersion" style="display: none;" change:translate="&amp;modules.dashboard.bo.blocks.WrongVersion; ui true">(Version courante NAVVERSION non validée)</div>
+		<strong change:translate="&amp;modules.dashboard.bo.blocks.Backofficetitle; ui true">Pour l'interface d'administration</strong>
 		<strong id="currentVersion" style="color: red" />
 	    <ul class="dash-module-small">
 			<li tal:repeat="versions browsers/backoffice">
@@ -34,7 +34,7 @@
 			}
 		</script>
 		
-		<strong change:translate="&amp;modules.dashboard.bo.blocks.Frontofficetitle;">Pour le site web</strong>
+		<strong change:translate="&amp;modules.dashboard.bo.blocks.Frontofficetitle; ui true">Pour le site web</strong>
 	    <ul class="dash-module-small">
 			<li tal:repeat="versions browsers/frontoffice">
 				<span tal:replace="repeat/versions/key" /> : 
