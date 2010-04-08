@@ -217,7 +217,7 @@ div.dashboard-widget a.locate-document-link{
 	display: inline-block;
 	min-height: 16px;
 	padding-right: 20px;
-	background: url(/icons/small/view.png) center right no-repeat;
+	background: url(/changeicons/small/view.png) center right no-repeat;
 	cursor: pointer;
 }
 
