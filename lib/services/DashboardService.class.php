@@ -48,7 +48,9 @@ class dashboard_DashboardService
 	{
 		if ($this->defaultContent === null)
 		{
-			$filename = FileResolver::getInstance()->setPackageName('modules_dashboard')->setDirectory('templates')->getPath('defaultdashbord.xml');
+			$filename = FileResolver::getInstance()->setPackageName('modules_dashboard')
+				->setDirectory('templates')
+				->getPath('defaultdashbord.xml');
 			$this->defaultContent = file_get_contents($filename);
 		}
 		return $this->defaultContent;
@@ -70,6 +72,22 @@ class dashboard_DashboardService
 		$page->setLabel('Temporary Dashboard Page');
 		$page->setTemplate('tplNewDashboard');
     	$page->setContent($content);
+    	
+    	$template = theme_PagetemplateService::getInstance()->getByCodeName('tplNewDashboard');
+    	if (!$template)
+    	{
+    		$template = theme_PagetemplateService::getInstance()->getNewDocumentInstance();
+    		$template->setLabel('tplNewDashboard');
+    		$template->setCodename('tplNewDashboard');
+    		$template->setDoctype('XHTML 1.0 Strict');
+    		$template->setProjectpath('modules/dashboard/templates/tplNewDashboard.all.all.xul');
+    		$template->setUseprojectcss(false);
+    		$template->setUseprojectjs(false);
+    		
+    		$template->setCssscreen('modules.generic.frontoffice,modules.generic.richtext,modules.dashboard.dashboard');
+    		$template->setjs('modules.dashboard.lib.js.dashboard,modules.uixul.lib.dashboardext,modules.uixul.lib.wToolkit,modules.uixul.lib.jquery,modules.dashboard.lib.js.dashboardwidget');
+    		$template->save();
+    	}
 		return $page;
 	}
 }

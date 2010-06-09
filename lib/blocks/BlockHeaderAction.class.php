@@ -10,17 +10,8 @@ class dashboard_BlockHeaderAction extends website_BlockAction
 	 * @return String
 	 */
 	function execute($request, $response)
-	{
-        $this->getPage()->addStyle('modules.dashboard.dashboard');
-		$this->getPage()->addScript('modules.dashboard.lib.js.dashboard');
-		$this->getPage()->addScript('modules.uixul.lib.dashboardext');
-		
-		$this->getPage()->addScript('modules.uixul.lib.wToolkit');
-		$this->getPage()->addScript('modules.uixul.lib.jquery');
-		$this->getPage()->addScript('modules.dashboard.lib.js.dashboardwidget');
-		
-		$request->setAttribute('isRoot', $this->getBackEndUser()->getIsroot());
-		
+	{		
+		$request->setAttribute('isRoot', $this->getBackEndUser()->getIsroot());	
 		$userName = $this->getBackEndUser()->getFullname();
 		if (preg_match('/^[aeyuio]/i', f_util_StringUtils::strip_accents($userName)))
 		{
