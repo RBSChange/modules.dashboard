@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<perspective>
+	<models>
+	</models>
+	<toolbar>
+	</toolbar>
+	<actions>
+		<action name="refreshDashboard" single="true" icon="refresh" label="&amp;modules.uixul.bo.general.Refresh;" />
+		<action name="closeModuleAction" single="true" icon="error" label="&amp;modules.uixul.bo.general.buttons.Close-module;" />
+		<action name="editDashboard" single="true" icon="edit" label="&amp;modules.dashboard.bo.general.Edit;" />
+	</actions>
+</perspective>

@@ -1,6 +1,6 @@
 <hbox flex="1">
 	<deck anonid="pageDeck" flex="1" selectedIndex="0">
-		<hbox flex="1">
+		<hbox flex="1" anonid="mainViewDeck">
 			<iframe anonid="dashboard_frame" src="about:blank" flex="1" />
 		</hbox>
 		<hbox flex="1">
