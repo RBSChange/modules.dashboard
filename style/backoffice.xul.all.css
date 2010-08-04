@@ -1,3 +1,5 @@
 #content-block{
-	width: 750px;
+	width: 950px;
+	min-width: 950px;
+	max-width: 950px;
 }

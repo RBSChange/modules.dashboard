@@ -25,31 +25,19 @@ class dashboard_EditContentSuccessView extends f_view_BaseView
         $this->setAttribute('pageContent', $pageContent);
 		
         // include stylesheets
-        
-        $this->getStyleService()->registerStyle('modules.generic.frontoffice');
-        $this->getStyleService()->registerStyle('modules.generic.richtext');
-        //$this->getStyleService()->registerStyle('modules.website.frontoffice');
-        //$this->getStyleService()->registerStyle('modules.website.richtext');
-        
-        $modules = array('generic', 'uixul', 'dashboard', 'website');
-        $cssInclusion = array();
-        foreach ($modules as $module)
-        {
-            $this->getStyleService()->registerStyle('modules.' . $module . '.backoffice');
-            $this->getStyleService()->registerStyle('modules.' . $module . '.bindings');
-		    $link = LinkHelper::getUIChromeActionLink('uixul', 'GetStylesheet')->setQueryParametre(K::WEBEDIT_MODULE_ACCESSOR, $module);
-            $cssInclusion[] = '<?xml-stylesheet href="' . $link->getUrl() . '" type="text/css"?>';
-        }
-        
-        $this->getStyleService()->registerStyle('modules.dashboard.dashboard');
-        $this->getStyleService()->registerStyle('modules.uixul.EditContent');
+ 		$link = LinkHelper::getUIChromeActionLink('dashboard', 'GetEditContentStylesheets')
+			->setArgSeparator(f_web_HttpLink::ESCAPE_SEPARATOR);
+		$this->setAttribute('cssInclusion', '<?xml-stylesheet href="' . $link->getUrl() . '" type="text/css"?>');
 
-        $this->setAttribute('cssInclusion', $this->getStyleService()->execute(K::XUL, null) . join("\n", $cssInclusion));
-
-        // include JavaScript
-		$this->getJsService()->registerScript('modules.uixul.lib.default');
-        $this->setAttribute('scriptInclusion', $this->getJsService()->executeInline(K::XUL));
-
+		$link = LinkHelper::getUIChromeActionLink('uixul', 'GetAdminJavascripts')
+			->setArgSeparator(f_web_HttpLink::ESCAPE_SEPARATOR);
+			$this->setAttribute('scriptlibrary', '<script type="application/x-javascript" src="' . $link->getUrl() . '"/>');
+			
+		// include JavaScript
+		$this->getJsService()->registerScript('modules.dashboard.lib.js.editcontent');
+		$this->setAttribute('scriptInclusion', $this->getJsService()->executeInline(K::XUL));
+		
+		
         $this->setAttribute('PAGEID', $backEndUser->getId());
         $this->setAttribute('PAGELANG', RequestContext::getInstance()->getLang());
        	$this->setAttribute('PAGEVERSION', -1);
