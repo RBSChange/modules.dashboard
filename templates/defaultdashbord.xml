@@ -29,6 +29,9 @@
 				<change:row>
 					<change:block type="modules_users_DashboardConnectedUsers" />
 				</change:row>
+				<change:row>
+					<change:block type="modules_task_DashboardPlannedTasksInfos" />
+				</change:row>
 			</change:col>
 		</change:layout>
 	</change:content>
