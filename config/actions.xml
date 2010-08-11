@@ -21,7 +21,7 @@
 	    	wCore.debug('dashboard.editDashboard');
 	    	var oldUrl = this.getElementByAnonId('designDasboardFrame').getAttribute("src");
 	    	
-	    	editUrl = wToolkit.buildXulURL('dashboard', 'EditContent', {lang: Context.W_LANG, uilang: Context.W_UILANG}, true);
+	    	var editUrl = wToolkit.buildXulURL('dashboard', 'EditContent', {lang: Context.W_LANG, uilang: Context.W_UILANG}, true);
 	    	var deck = this.getElementByAnonId('pageDeck');
 			if (editUrl != oldUrl)
 			{
