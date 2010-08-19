@@ -40,19 +40,7 @@
 		<body><![CDATA[
 			try
 			{	
-				wCore.debug('dashboard.onModuleInit');
-				var oldUrl = this.getElementByAnonId('dashboard_frame').getAttribute("src");
-				
-				wCore.debug('dashboard.onModuleInit oldurl :' + oldUrl);
-				var dashboardRegularUrl = wToolkit.buildXulURL('dashboard', 'Dashboard', {lang: Context.W_LANG, uilang: Context.W_UILANG}, 'html');
-				
-				wCore.debug('dashboard.onModuleInit RegularUrl :' + dashboardRegularUrl);
-				if (oldUrl != dashboardRegularUrl)
-				{	
-					wCore.debug('dashboard.onModuleInit setSrc' + dashboardRegularUrl);	    
-			    	this.getElementByAnonId('dashboard_frame').setAttribute("src", dashboardRegularUrl);
-			    }
-			    
+				this.setDashboardUrl();
 				var deck = this.getElementByAnonId('pageDeck');
 				wCore.debug('dashboard.onModuleInit deck');
 				
@@ -64,6 +52,26 @@
 		    {
 		    	wCore.error('onModuleInit', [], e);
 		    }
+		]]></body>
+	</action>
+	
+	<action name="setDashboardUrl">
+		<parameter name="url" />
+		<body><![CDATA[
+		if (url == null)
+		{
+			url = wToolkit.buildXulURL('dashboard', 'Dashboard', {lang: Context.W_LANG, uilang: Context.W_UILANG}, 'html'); 
+		}
+		var oldUrl = this.getElementByAnonId('dashboard_frame').getAttribute("src");
+			
+		wCore.debug('dashboard.setDashboardUrl oldurl :' + oldUrl);
+		wCore.debug('dashboard.setDashboardUrl regularUrl :' + url);
+		
+		if (oldUrl != url)
+		{	
+			wCore.debug('dashboard.setDashboardUrl setSrc' + url);	    
+		   	this.getElementByAnonId('dashboard_frame').setAttribute("src", url);
+		}
 		]]></body>
 	</action>
 
@@ -80,5 +88,18 @@
 			wCore.debug('onSwitchFrom : ' + fromModule);
 			this.refreshDashboard();
 		]]></body>
+	</action>
+	
+	<action name="onContextLangChanged">
+		<body><![CDATA[
+		try 
+		{
+			this.setDashboardUrl();
+		}
+		catch (e)
+		{
+			wCore.error("wBaseModule.onContextLangChanged", [], e);
+		}
+		]]></body>				
 	</action>
 </actions>
