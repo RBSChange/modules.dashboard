@@ -37,8 +37,9 @@ class dashboard_BlockDashboardRssReaderAction extends dashboard_BlockDashboardAc
 		{
 			$this->title = f_Locale::translateUI('&modules.dashboard.bo.general.No-Feed-URL-define;');
 		}
-		else
+		else if ($request->hasParameter('refresh'))
 		{
+			
 			try
 			{
 				$rssRequest = HTTPClientService::getInstance()->getNewHTTPClient();
