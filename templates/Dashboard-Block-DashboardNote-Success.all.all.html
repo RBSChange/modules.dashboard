@@ -1,7 +1,7 @@
 <div class="dashboard-widget" static="true">
 	<div class="title-bar">
 		<div change:include="module 'dashboard'; template 'Dashboard-Inc-MiniButtonsBar'; type 'html'" />
-		<img change:icon="src note/small" /> 
+		<img change:img="icon/small/note.png" /> 
 		<tal:block tal:condition="title" tal:replace="title" />
 		<tal:block tal:condition="not: title" change:translate="&modules.dashboard.bo.blocks.DashboardNote.Title; ui true" />
 	</div>

@@ -1,7 +1,7 @@
 <div class="dashboard-widget" static="true">
 	<div class="title-bar">
 		<div change:include="module 'dashboard'; template 'Dashboard-Inc-MiniButtonsBar'; type 'html'" />
-		<img change:icon="browser/small" /> <tal:block change:translate="&amp;modules.dashboard.bo.blocks.Browsersversion; ui true" />
+		<img change:img="icon/small/browser.png" /> <tal:block change:translate="&amp;modules.dashboard.bo.blocks.Browsersversion; ui true" />
 	</div>
 	<div class="content-block" tal:condition="not: browsers">
 	   <strong change:translate="&amp;modules.dashboard.bo.blocks.Unknowversion; ui true">Les versions ne sont pas définies pour ce projet</strong>
