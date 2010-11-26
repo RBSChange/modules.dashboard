@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.dashboard.bo.blocks.dashboardnote" lcid="fr_FR">
+  <key id="title">bloc note</key>
+  <key id="fieldrows">lignes</key>
+  <key id="fieldrows-help">nombre de lignes du champ de saisie.</key>
+</i18n>

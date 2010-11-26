@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.dashboard.dashboard" lcid="en_GB">
+  <key id="refresh">refresh</key>
+  <key id="gotomodule">open module</key>
+  <key id="toggle">minimize/maximize</key>
+  <key id="no-information-to-display">no information to display.</key>
+  <key id="loading-in-progress">loading in progress</key>
+  <key id="loading-error">loading error</key>
+  <key id="dummycontent">Dummy content</key>
+</i18n>

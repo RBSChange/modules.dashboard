@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.dashboard.bo.blocks.dashboardnote" lcid="en_GB">
+  <key id="title">notepad</key>
+  <key id="fieldrows">lines</key>
+  <key id="fieldrows-help">number of lines in the input field.</key>
+</i18n>

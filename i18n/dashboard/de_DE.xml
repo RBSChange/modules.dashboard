@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.dashboard.dashboard" lcid="de_DE">
+  <key id="refresh">aktualisieren</key>
+  <key id="gotomodule">Modul öffnen</key>
+  <key id="toggle">minimieren/maximieren</key>
+  <key id="no-information-to-display">Keine Information anzuzeigen.</key>
+  <key id="loading-error">Fehler beim Laden</key>
+  <key id="dummycontent">Der Inhalt dieses Blocks kann im Bearbeitungsmodus nicht angezeigt werden.</key>
+</i18n>

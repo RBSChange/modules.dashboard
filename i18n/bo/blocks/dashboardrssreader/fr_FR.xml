@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.dashboard.bo.blocks.dashboardrssreader" lcid="fr_FR">
+  <key id="title">flux rss</key>
+  <key id="feedurl">URL du flux</key>
+  <key id="feedurl-help">URL du flux à afficher.</key>
+  <key id="maxitemcount">nombre maximum d'éléments</key>
+  <key id="maxitemcount-help">nombre maximum d'éléments du flux à afficher.</key>
+</i18n>

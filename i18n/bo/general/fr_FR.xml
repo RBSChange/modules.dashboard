@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.dashboard.bo.general" lcid="fr_FR">
+  <key id="module-name">Accueil</key>
+  <key id="tree-root-name">Tableau de bord</key>
+  <key id="system-folder-name">Tableau de bord</key>
+  <key id="dashboard">Accueil</key>
+  <key id="dashboardof-voyel">Bienvenue </key>
+  <key id="dashboardof">Bienvenue </key>
+  <key id="edit">Editer</key>
+  <key id="no-feed-url-define">URL du flux non définie</key>
+  <key id="feed-error">erreur sur le flux</key>
+</i18n>

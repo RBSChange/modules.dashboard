@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.dashboard.bo.general" lcid="en_GB">
+  <key id="module-name">Home</key>
+  <key id="tree-root-name">Dashboard edition</key>
+  <key id="system-folder-name">Dashboard</key>
+  <key id="dashboard">Home</key>
+  <key id="dashboardof-voyel">Welcome </key>
+  <key id="dashboardof">Welcome </key>
+  <key id="edit">Edit</key>
+  <key id="no-feed-url-define">No Feed URL define</key>
+  <key id="feed-error">feed error</key>
+</i18n>

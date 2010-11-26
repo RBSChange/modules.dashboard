@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.dashboard.bo.blocks.dashboardrssreader" lcid="en_GB">
+  <key id="title">rss feed</key>
+  <key id="feedurl">feed's URL</key>
+  <key id="maxitemcount-help">maximum number of items to display</key>
+</i18n>

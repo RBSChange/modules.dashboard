@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.dashboard.dashboard" lcid="fr_FR">
+  <key id="refresh">rafraîchir</key>
+  <key id="gotomodule">ouvrir le module</key>
+  <key id="toggle">minimiser/maximiser</key>
+  <key id="no-information-to-display">aucune information à afficher.</key>
+  <key id="loading-in-progress">chargement en cours</key>
+  <key id="loading-error">erreur de chargement</key>
+  <key id="dummycontent">Le contenu de ce bloc n'est pas affichable en mode édition.</key>
+</i18n>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.dashboard.bo.general" lcid="de_DE">
+  <key id="module-name">Startseite</key>
+  <key id="tree-root-name">Startseite</key>
+  <key id="system-folder-name">Startseite</key>
+  <key id="dashboard">Startseite</key>
+  <key id="dashboardof-voyel">Willkommen</key>
+  <key id="dashboardof">Willkommen</key>
+  <key id="edit">Bearbeiten</key>
+</i18n>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.dashboard.bo.blocks.header" lcid="fr_FR">
+  <key id="edit">éditer</key>
+  <key id="refresh">actualiser</key>
+</i18n>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.dashboard.bo.blocks" lcid="de_DE">
+  <key id="tools">Werkzeuge</key>
+  <key id="packagesversion">Modulversionen</key>
+  <key id="browsersversion">Browserversionen</key>
+  <key id="unknowversion">Für dieses Projekt sind die Versionen nicht definiert</key>
+  <key id="backofficetitle">Für die Administrationsbenutzeroberfläche</key>
+  <key id="frontofficetitle">Für die Webseite</key>
+  <key id="wrongversion">(aktuelle Version NAVVERSION nicht bestätigt)</key>
+  <key id="shortcut">Verknüpfung</key>
+  <key id="moduledefault">Standardwidget eines Moduls</key>
+</i18n>
