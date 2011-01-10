@@ -43,6 +43,7 @@ class dashboard_BlockDashboardRssReaderAction extends dashboard_BlockDashboardAc
 			try
 			{
 				$rssRequest = HTTPClientService::getInstance()->getNewHTTPClient();
+				$rssRequest->setTimeOut(5);
 				$rssRequest->setReferer(LinkHelper::getUIChromeActionLink('uixul', 'Admin') . '&fqdn=' . urlencode(Framework::getUIDefaultHost()));
 				$xmlRSS = $rssRequest->get($this->getConfiguration()->getFeedurl());
 				$doc = f_util_DOMUtils::fromString($xmlRSS);			
