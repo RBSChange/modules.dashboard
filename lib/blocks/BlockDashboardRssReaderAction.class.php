@@ -42,10 +42,12 @@ class dashboard_BlockDashboardRssReaderAction extends dashboard_BlockDashboardAc
 			
 			try
 			{
+				session_commit();
 				$rssRequest = HTTPClientService::getInstance()->getNewHTTPClient();
-				$rssRequest->setTimeOut(5);
+				$rssRequest->setTimeOut(15);
 				$rssRequest->setReferer(LinkHelper::getUIChromeActionLink('uixul', 'Admin') . '&fqdn=' . urlencode(Framework::getUIDefaultHost()));
 				$xmlRSS = $rssRequest->get($this->getConfiguration()->getFeedurl());
+				session_start();
 				$doc = f_util_DOMUtils::fromString($xmlRSS);			
 				$chanel = $doc->getElementsByTagName('channel')->item(0);
 				if ($chanel !== null)
