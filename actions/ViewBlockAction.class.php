@@ -85,7 +85,9 @@ class dashboard_ViewBlockAction extends f_action_BaseAction
 		$output->endElement(); //icon
 		
 		$output->startElement('content');
-		$output->writeCData($content);
+                $output->text($content);
+                $output->endElement(); //content
+
 		$output->endElement(); //content
 		
 		$output->endElement(); //dashboard-widget
