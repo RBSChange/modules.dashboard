@@ -1,1 +1,0 @@
-<div change:translate="&modules.<{$module}>.bo.blocks.<{$blockName}>.Title;" />
