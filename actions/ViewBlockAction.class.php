@@ -16,10 +16,19 @@ class dashboard_ViewBlockAction extends f_action_BaseAction
 		$displayParam = $request->getModuleParameter('dashboard', 'display');
 		if (!is_array($displayParam)) {$displayParam = array();}
 		
+		
 		$blockClassName = $moduleName . '_Block' . ucfirst($package[1]) . 'Action';
-		$blockClass = new ReflectionClass($blockClassName);
+		
 		try
 		{
+			$bt = 'modules_'. $moduleName . '_'.$package[1];
+			$blockClassName = block_BlockService::getInstance()->getBlockActionClassNameByType($bt);
+			if ($blockClassName === null)
+			{
+				throw new Exception("Block $bt not found");
+			}
+			$blockClass = new ReflectionClass($blockClassName);
+			
 			$moduleParams = $request->getParameter($moduleName.'Param', array());
 			$moduleParams['refresh'] = true;
 			$request->setParameter($moduleName.'Param', $moduleParams);
@@ -28,7 +37,7 @@ class dashboard_ViewBlockAction extends f_action_BaseAction
 			$page = dashboard_DashboardService::getInstance()->getTemporaryPageFromUser($user);
 			$blockController->setPage($page);
 			$blockController->getContext()->setAttribute(website_BlockAction::BLOCK_BO_MODE_ATTRIBUTE, false);
-			$blockInstance = $blockClass->newInstance();			
+			$blockInstance = $blockClass->newInstance($bt);			
 			foreach ($displayParam as $name => $value)
 			{
 				$blockInstance->setConfigurationParameter($name, $value);

@@ -16,15 +16,21 @@ class dashboard_DisplayBlockAction extends f_action_BaseJSONAction
 		$displayParam = $request->getParameter('display');
 		if (!is_array($displayParam)) {$displayParam = array();}
 		
-		$blockClassName = $package[1] . '_Block' . ucfirst($package[2]) . 'Action';
-		$blockClass = new ReflectionClass($blockClassName);
 		try
 		{
+			$blockClassName = block_BlockService::getInstance()->getBlockActionClassNameByType($blocType);
+			if ($blockClassName === null)
+			{
+				throw new Exception("Block $bt not found");
+			}
+			$blockClass = new ReflectionClass($blockClassName);
+			
+			
 			$blockController = website_BlockController::getInstance();
 			$page = dashboard_DashboardService::getInstance()->getTemporaryPageFromUser(DocumentHelper::getDocumentInstance($pageId));
 			$blockController->setPage($page);
 			$blockController->getContext()->setAttribute(website_BlockAction::BLOCK_BO_MODE_ATTRIBUTE, true);
-			$blockInstance = $blockClass->newInstance();
+			$blockInstance = $blockClass->newInstance($blocType);
 			
 			foreach ($displayParam as $name => $value)
 			{

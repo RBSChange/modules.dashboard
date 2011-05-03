@@ -13,6 +13,6 @@
 	      documentversion: ${PAGEVERSION}
 	    };
 	]]></script>
-	<cpageditor id="mainEditor" serverRequestModule="dashboard" hiddenpreview="true" hiddensavetemplate="true"
-		tal:content="pageContent" />
+	<cpageditor id="mainEditor"  editorType="${editorType}" 
+	serverRequestModule="dashboard" hiddenpreview="true" hiddensavetemplate="true">${pageContent}</cpageditor>
 </window>

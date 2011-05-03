@@ -18,11 +18,12 @@ class dashboard_EditContentSuccessView extends f_view_BaseView
     public function _execute($context, $request)
     {
     	$backEndUser = $this->getBackEndUser($request);
-    	$document = dashboard_DashboardService::getInstance()->getTemporaryPageFromUser($backEndUser);    	
+    	$document = dashboard_DashboardService::getInstance()->getTemporaryPageFromUser($backEndUser);    
     	$pageContent = website_PageService::getInstance()->getContentForEdition($document);
     	
     	$this->setTemplateName('Dashboard-EditContent-Success', K::XUL);
         $this->setAttribute('pageContent', $pageContent);
+		$this->setAttribute('editorType', website_PageRessourceService::getInstance()->getTemplateType());
 		
         // include stylesheets
  		$link = LinkHelper::getUIChromeActionLink('dashboard', 'GetEditContentStylesheets')
