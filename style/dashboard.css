@@ -221,6 +221,19 @@ div.dashboard-widget a.locate-document-link{
 	cursor: pointer;
 }
 
+/** Contextual actions */
+div.dashboard-widget .contextual-action{
+	display: inline-block;
+	min-height: 16px;
+	margin-left: 10px;
+	cursor: pointer;
+	visibility: hidden;
+}
+div.dashboard-widget tr:hover .contextual-action,
+div.dashboard-widget li:hover .contextual-action{
+	visibility: visible;	
+}
+
 /** Note block */
 .modules-dashboard-DashboardNote .content-block>div{
 	margin: 4px 4px 4px 0;
