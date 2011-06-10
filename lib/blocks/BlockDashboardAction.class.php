@@ -67,7 +67,7 @@ abstract class dashboard_BlockDashboardAction extends website_BlockAction
 	 */
 	function execute($request, $response)
 	{
-		$forEdition = $this->isInBackoffice();
+		$forEdition = $this->isInBackofficeEdition();
 		if ($forEdition)
 		{
 			$request->setAttribute('forEdition', true);
