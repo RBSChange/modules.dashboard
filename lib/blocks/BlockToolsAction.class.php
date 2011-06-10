@@ -20,7 +20,7 @@ class dashboard_BlockToolsAction extends website_BlockAction
 			foreach (ModuleService::getInstance()->getPackageVersionList() as $packageName => $version)
 			{
 				$moduleName = substr($packageName, 8);
-				$packages[$moduleName] = f_Locale::translate('&modules.' . $moduleName . '.bo.general.Module-name;');
+				$packages[$moduleName] = f_Locale::translateUI('&modules.' . $moduleName . '.bo.general.Module-name;');
 			}
 			$canEditLocale = true;
 		}
@@ -36,7 +36,7 @@ class dashboard_BlockToolsAction extends website_BlockAction
 				$visible = constant($prefixConstModulename . 'VISIBLE');
 				if ($enabled && $visible && $ps->hasPermission($user, $packageName . '.EditLocale', $ms->getRootFolderId($moduleName)))
 				{
-					$packages[$moduleName] = f_Locale::translate('&modules.' . $moduleName . '.bo.general.Module-name;');
+					$packages[$moduleName] = f_Locale::translateUI('&modules.' . $moduleName . '.bo.general.Module-name;');
 					$canEditLocale = true;
 				}
 			}
