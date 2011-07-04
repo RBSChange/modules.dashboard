@@ -17,7 +17,7 @@ class dashboard_BlockModuledefaultAction extends website_BlockAction
 			return website_BlockView::NONE;
 		}
 		
-		if ($this->isInBackoffice())
+		if ($this->isInBackofficeEdition())
 		{
 		   $modulename = substr($widget, 8);
 		   $dummy = array('package' => $widget, 'modulename' => $modulename, 'title' => ModuleService::getInstance()->getLocalizedModuleLabel($modulename));
