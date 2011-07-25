@@ -54,7 +54,6 @@ abstract class dashboard_BlockDashboardAction extends website_BlockAction
 			$link->setQueryParameter('dashboardParam', $dashboardParam);
 			$link->setQueryParameter($modulename . 'Param', $request->getParameters());
 		}
-		$link->setArgSeparator(f_web_HttpLink::ESCAPE_SEPARATOR);
 		$request->setAttribute('refreshURL', $link->getUrl());
 	}
 	
