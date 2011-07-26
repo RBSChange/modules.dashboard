@@ -33,7 +33,7 @@ class dashboard_DashboardService
 	public function getDashboardWidgets()
 	{
 		$widgetArray = array();
-		$moduleNameArray = ModuleService::getInstance()->getModules();
+		$moduleNameArray = ModuleService::getInstance()->getPackageNames();
 		foreach ($moduleNameArray as $moduleName)
 		{
 			if ($moduleName != 'modules_uixul' && $moduleName != 'modules_dashboard' && Controller::getInstance()->actionExists(substr($moduleName, 8), 'Dashboard'))

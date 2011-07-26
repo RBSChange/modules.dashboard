@@ -13,7 +13,7 @@ class dashboard_BlockShortcutAction extends website_BlockAction
 		
 		// Bloc title.
 		$title = $this->getConfiguration()->getBlocktitle();
-		$title = $title ? $title : f_Locale::translate('&modules.uixul.bo.general.Modules;');
+		$title = $title ? $title : LocaleService::getInstance()->transBO('m.uixul.bo.general.modules', array('ucf'));
 		$request->setAttribute('title', $title);
 		
 		// Modules.

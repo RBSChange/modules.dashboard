@@ -34,7 +34,7 @@ class dashboard_ListAvailablemodulesService extends BaseService
 			$fullAccess = $user->getIsroot();
 			$ms = ModuleService::getInstance();
 			$ps = f_permission_PermissionService::getInstance();
-			foreach ($ms->getModules() as $packageName)
+			foreach ($ms->getPackageNames() as $packageName)
 			{
 				$moduleName = substr($packageName, 8);
 				$module = $ms->getModule($moduleName);
