@@ -1,8 +1,8 @@
 <div class="dashboard-widget">
 	<div class="title-bar">
-		<img change:img="icon/small/note.png" /> <tal:block change:translate="&modules.dashboard.bo.blocks.DashboardNote.Title; ui true" />
+		<img change:img="icon/small/note.png" /> <tal:block tal:content="transui:m.dashboard.bo.blocks.dashboardnote.title,ucf" />
 	</div>
 	<div class="content-block">
-		<div class="content" change:translate="&modules.dashboard.dashboard.DummyContent; ui true">...</div>
+		<div class="content" tal:content="transui:m.dashboard.dashboard.dummycontent,ucf">...</div>
 	</div>
 </div>

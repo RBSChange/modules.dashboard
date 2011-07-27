@@ -1,8 +1,8 @@
 <div class="dashboard-widget">
 	<div class="title-bar">
-		<img change:img="icon/small/rss.png" />	<tal:block change:translate="&modules.dashboard.bo.blocks.DashboardRssReader.Title;" />
+		<img change:img="icon/small/rss.png" />	<tal:block tal:content="transui:m.dashboard.bo.blocks.dashboardrssreader.title,ucf" />
 	</div>
 	<div class="content-block">
-		<div class="content" change:translate="&modules.dashboard.dashboard.DummyContent;">...</div>
+		<div class="content" tal:content="transui:m.dashboard.dashboard.dummycontent,ucf">...</div>
 	</div>
 </div>

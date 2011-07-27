@@ -1,9 +1,9 @@
 <h1>${username}</h1>
 <div class="toolbar">
 	<div onclick="parent.window.getModuleByName('dashboard').editDashboard();">
-		<img change:img="icon/small/edit.png" /> <tal:block change:translate="&modules.dashboard.bo.blocks.header.Edit;ui true" />
+		<img change:img="icon/small/edit.png" /> <tal:block tal:content="transui:m.dashboard.bo.blocks.header.edit,ucf" />
 	</div>
 	<div onclick="refresh();">
-		<img change:img="icon/small/refresh.png" /> <tal:block change:translate="&modules.dashboard.bo.blocks.header.Refresh;ui true" />
+		<img change:img="icon/small/refresh.png" /> <tal:block tal:content="transui:m.dashboard.bo.blocks.header.refresh,ucf" />
 	</div>
 </div>

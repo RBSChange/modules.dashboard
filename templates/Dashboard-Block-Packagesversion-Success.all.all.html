@@ -1,7 +1,7 @@
 <div class="dashboard-widget" static="true">
 	<div class="title-bar">
 		<div change:include="module 'dashboard'; template 'Dashboard-Inc-MiniButtonsBar'; type 'html'" />
-		<img change:img="icon/small/modules.png" /> <tal:block change:translate="&modules.dashboard.bo.blocks.Packagesversion;" />
+		<img change:img="icon/small/modules.png" /> <tal:block tal:content="transui:m.dashboard.bo.blocks.packagesversion,ucf" />
 	</div>
 	<div class="content-block">
 	    <ul class="dash-module-small">

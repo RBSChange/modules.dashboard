@@ -1,21 +1,21 @@
 <div class="dashboard-widget" static="true">
 	<div class="title-bar">
 		<div change:include="module 'dashboard'; template 'Dashboard-Inc-MiniButtonsBar'; type 'html'" />
-		<img change:img="icon/small/admin.png" /> <tal:block change:translate="&modules.uixul.bo.general.Tools; ui true" />
+		<img change:img="icon/small/admin.png" /> <tal:block tal:content="transui:m.uixul.bo.general.tools,ucf" />
 	</div>
 	<div class="content-block">
 		<ul>
 		    <li>
 		    	<img src="${UIHOST}/changeicons/small/preferences.png" />
-		    	<a href="javascript:;" onclick="openPreferences();" change:translate="&modules.uixul.bo.actions.Preferences; ui true" />
+		    	<a href="javascript:;" onclick="openPreferences();" tal:content="transui:m.uixul.bo.actions.preferences,ucf" />
 		    </li>
 		    <li tal:condition="configuration/getShowawstatslink">
 		    	<img src="${UIHOST}/changeicons/small/statistics.png" />
-		    	<a href="javascript:;" onclick="loadStats();" change:translate="&modules.dashboard.bo.blocks.tools.Awstats; ui true" />
+		    	<a href="javascript:;" onclick="loadStats();" tal:content="transui:m.dashboard.bo.blocks.tools.awstats,ucf" />
 		    </li>
 		    <li tal:condition="configuration/getShowgoogleanalyticslink">
 		    	<img src="${UIHOST}/changeicons/small/statistics.png" />
-		    	<a href="http://www.google.com/analytics/" target="_blank" change:translate="&modules.dashboard.bo.blocks.tools.Google-analytics; ui true" />
+		    	<a href="http://www.google.com/analytics/" target="_blank" tal:content="transui:m.dashboard.bo.blocks.tools.google-analytics,ucf" />
 		    </li>
 		</ul>
 	</div>
