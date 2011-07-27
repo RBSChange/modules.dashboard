@@ -25,10 +25,6 @@
 	
 	<block type="modules_dashboard_header"  hidden="true" dashboard="true"/>
 
-	<!-- Deprecated. -->
-	<!-- 
-	<block type="empty" dashboard="true" display="" icon="selection" label="&amp;modules.uixul.bo.layout.EmptyBlock;" />
-	 -->
 	<block type="modules_dashboard_moduledefault" icon="earth_view" hidden="true" dashboard="true"
 		label="&amp;modules.dashboard.bo.blocks.Moduledefault;">
 		<parameters>
