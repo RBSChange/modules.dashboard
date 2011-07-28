@@ -85,7 +85,7 @@ class dashboard_DashboardService
     		$template->setUseprojectjs(false);
     		
     		$template->setCssscreen('modules.generic.frontoffice,modules.generic.richtext,modules.dashboard.dashboard');
-    		$template->setJs('modules.dashboard.lib.js.dashboard,modules.uixul.lib.dashboardext,modules.uixul.lib.wCore,modules.dashboard.lib.js.dashboardwidget');
+    		$template->setJs('modules.dashboard.lib.js.dashboard,modules.uixul.lib.wCore,modules.dashboard.lib.js.dashboardwidget');
     		$template->save();
     	}
 		return $page;
