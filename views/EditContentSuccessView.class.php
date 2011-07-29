@@ -1,7 +1,6 @@
 <?php
 class dashboard_EditContentSuccessView extends f_view_BaseView
 {
-
 	/**
 	 * @param Request $request
 	 * @return users_persistentdocument_backenduser
@@ -32,12 +31,12 @@ class dashboard_EditContentSuccessView extends f_view_BaseView
 
 		$link = LinkHelper::getUIChromeActionLink('uixul', 'GetAdminJavascripts')
 			->setArgSeparator(f_web_HttpLink::ESCAPE_SEPARATOR);
-			$this->setAttribute('scriptlibrary', '<script type="application/x-javascript" src="' . $link->getUrl() . '"/>');
+		$this->setAttribute('scriptlibrary', '<script type="application/x-javascript" src="' . $link->getUrl() . '"/>');
 			
 		// include JavaScript
-		$this->getJsService()->registerScript('modules.dashboard.lib.js.editcontent');
-		$this->setAttribute('scriptInclusion', $this->getJsService()->executeInline(K::XUL));
-		
+		$jss = website_JsService::getInstance();
+		$jss->registerScript('modules.dashboard.lib.js.editcontent');
+		$this->setAttribute('scriptInclusion', $jss->executeInline(K::XUL));
 		
         $this->setAttribute('PAGEID', $backEndUser->getId());
         $this->setAttribute('PAGELANG', RequestContext::getInstance()->getLang());

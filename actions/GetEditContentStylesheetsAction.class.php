@@ -24,12 +24,11 @@ class dashboard_GetEditContentStylesheetsAction extends f_action_BaseAction
         {
         	$styleArray[] = 'modules.' . $module . '.backoffice';
         	$styleArray[] = 'modules.' . $module . '.bindings';
-        }
-        
+        }        
         $styleArray[] = 'modules.dashboard.dashboard';
       	$styleArray[] = 'modules.uixul.EditContent';
         
-		$ss = StyleService::getInstance();
+		$ss = website_StyleService::getInstance();
 		foreach ($styleArray as $stylename)
 		{
 			echo $ss->getCSS($stylename, $ss->getFullEngineName('xul'));
