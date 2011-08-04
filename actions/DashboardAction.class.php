@@ -1,15 +1,15 @@
 <?php
-class dashboard_DashboardAction extends f_action_BaseAction
+class dashboard_DashboardAction extends change_Action
 {
 	/**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 */
 	public function _execute($context, $request)
 	{
 		$rc = RequestContext::getInstance();
         $rc->setUILangFromParameter($request->getParameter('uilang'));
-        controller_ChangeController::setNoCache();
+        change_Controller::setNoCache();
         try
         {
         	$rc->beginI18nWork($rc->getLang());
@@ -22,6 +22,6 @@ class dashboard_DashboardAction extends f_action_BaseAction
         {  
         	$rc->endI18nWork($e);     
         }
-		return View::NONE;
+		return change_View::NONE;
 	}
 }

@@ -36,7 +36,7 @@ class dashboard_DashboardService
 		$moduleNameArray = ModuleService::getInstance()->getPackageNames();
 		foreach ($moduleNameArray as $moduleName)
 		{
-			if ($moduleName != 'modules_uixul' && $moduleName != 'modules_dashboard' && Controller::getInstance()->actionExists(substr($moduleName, 8), 'Dashboard'))
+			if ($moduleName != 'modules_uixul' && $moduleName != 'modules_dashboard' && change_Controller::getInstance()->actionExists(substr($moduleName, 8), 'Dashboard'))
 			{
 				$widgetArray[] = $moduleName;
 			}

@@ -1,16 +1,16 @@
 <?php
-class dashboard_ViewBlockAction extends f_action_BaseAction
+class dashboard_ViewBlockAction extends change_Action
 {
 	/**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 */
 	public function _execute($context, $request)
 	{
 		$user = $this->getBackEndUser();
 		if (!$user)
 		{
-			return View::NONE;
+			return change_View::NONE;
 		}
 		$blocType = $request->getModuleParameter('dashboard', 'type');
 		$package = explode('_', $blocType);
@@ -61,10 +61,10 @@ class dashboard_ViewBlockAction extends f_action_BaseAction
 			$openModule = false;
 		}
 
-		controller_ChangeController::setNoCache();
+		change_Controller::setNoCache();
 		header('Content-Type' . ':' . 'text/xml');
 		$this->write($title, $icon, $blockContent, $openModule);
-		return View::NONE;
+		return change_View::NONE;
 	}
 
 	/**

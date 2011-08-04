@@ -1,8 +1,8 @@
 <?php
-class dashboard_EditContentSuccessView extends f_view_BaseView
+class dashboard_EditContentSuccessView extends change_View
 {
 	/**
-	 * @param Request $request
+	 * @param change_Request $request
 	 * @return users_persistentdocument_backenduser
 	 */
 	private function getBackEndUser($request)
@@ -11,8 +11,8 @@ class dashboard_EditContentSuccessView extends f_view_BaseView
 	}
 	
     /**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 */
     public function _execute($context, $request)
     {

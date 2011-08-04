@@ -1,9 +1,9 @@
 <?php
-class dashboard_BaseModuleAction extends f_action_BaseAction
+class dashboard_BaseModuleAction extends change_Action
 {
 	/**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 */
 	public final function _execute($context, $request)
 	{
@@ -23,7 +23,7 @@ class dashboard_BaseModuleAction extends f_action_BaseAction
         
 		header('Content-Type' . ':' . 'text/xml');		
 		$this->write($title, $icon, $content);
-		return View::NONE;
+		return change_View::NONE;
 	}
 
 	/**
@@ -51,8 +51,8 @@ class dashboard_BaseModuleAction extends f_action_BaseAction
 	}
 	
 	/**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 * @return string
 	 */
 	protected function getContent($context, $request)

@@ -1,9 +1,9 @@
 <?php
-class dashboard_GetEditContentStylesheetsAction extends f_action_BaseAction
+class dashboard_GetEditContentStylesheetsAction extends change_Action
 {
 	/**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 */
 	public function _execute($context, $request)
 	{
@@ -13,7 +13,7 @@ class dashboard_GetEditContentStylesheetsAction extends f_action_BaseAction
         $rq->beginI18nWork($rq->getUILang());
         $this->renderBindings();
 		$rq->endI18nWork();		
-		return View::NONE;
+		return change_View::NONE;
 	}
 	
 	private function renderBindings()

@@ -1,9 +1,9 @@
 <?php
-class dashboard_EditContentAction extends f_action_BaseAction
+class dashboard_EditContentAction extends change_Action
 {
     /**
-     * @param Context $context
-     * @param Request $request
+     * @param change_Context $context
+     * @param change_Request $request
      */
     public function _execute ($context, $request)
     {
@@ -25,8 +25,8 @@ class dashboard_EditContentAction extends f_action_BaseAction
             {
                 $request->setAttribute('document', $document);
             }
-            return View::ERROR;
+            return change_View::ERROR;
         }
-        return View::SUCCESS;
+        return change_View::SUCCESS;
     }
 }

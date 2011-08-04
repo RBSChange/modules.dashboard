@@ -1,9 +1,9 @@
 <?php
-class dashboard_SaveNoteAction extends f_action_BaseJSONAction
+class dashboard_SaveNoteAction extends change_JSONAction
 {
 	/**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 */
 	public final function _execute($context, $request)
 	{
