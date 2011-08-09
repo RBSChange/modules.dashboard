@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <perspective>
-	<models>
-	</models>
-	<toolbar>
-	</toolbar>
+	<models />
+	<toolbar />
 	<actions>
 		<action name="refreshDashboard" single="true" icon="refresh" labeli18n="m.uixul.bo.general.refresh" />
 		<action name="closeModuleAction" single="true" icon="error" labeli18n="m.uixul.bo.general.buttons.close-module" />

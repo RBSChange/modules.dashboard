@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rights>
-	<actions>
-	</actions>
+	<actions />
 	<roles>	
 		<role name="Admin">
 			<permission name="*" />
-			<permission name="EditLocale" />
 		</role>
 	</roles>
 </rights>
