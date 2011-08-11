@@ -47,7 +47,7 @@ class dashboard_BlockDashboardRssReaderAction extends dashboard_BlockDashboardAc
 				$adapter = $client->getAdapter();
 				if ($adapter instanceof Zend_Http_Client_Adapter_Curl)
 				{
-					$adapter->setCurlOption('CURLOPT_REFERER', LinkHelper::getUIChromeActionLink('uixul', 'Admin') . '&fqdn=' . urlencode(Framework::getUIDefaultHost()));
+					$adapter->setCurlOption(CURLOPT_REFERER, LinkHelper::getUIChromeActionLink('uixul', 'Admin') . '&fqdn=' . urlencode(Framework::getUIDefaultHost()));
 				}
 				$client->setUri($this->getConfiguration()->getFeedurl());
 				$rssRequest = $client->request();
