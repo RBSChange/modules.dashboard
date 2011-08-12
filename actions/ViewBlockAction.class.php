@@ -45,7 +45,7 @@ class dashboard_ViewBlockAction extends change_Action
 			{
 				$blockInstance->setConfigurationParameter($name, $value);
 			}
-			$blockController->process($blockInstance, f_mvc_HTTPRequest::getInstance());
+			$blockController->process($blockInstance, change_Controller::getInstance()->getRequest());
 			$blockContent = $blockController->getResponse()->getWriter()->getContent();
 				
 			$title = $blockInstance->getTitle();
