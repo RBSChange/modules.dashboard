@@ -7,8 +7,8 @@ class dashboard_DisplayBlockAction extends change_JSONAction
 	 */
 	public function _execute($context, $request)
 	{
-		$componentId = $request->getParameter(K::COMPONENT_ID_ACCESSOR);
-		$componentLang = $request->getParameter(K::COMPONENT_LANG_ACCESSOR);
+		$componentId = $request->getParameter(change_Request::DOCUMENT_ID);
+		$componentLang = $request->getParameter('lang');
 		$pageId = $request->getParameter('pageid');
 		$blocType = $request->getParameter('type');
 		$package = explode('_', $blocType);

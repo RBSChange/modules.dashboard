@@ -7,7 +7,7 @@ class dashboard_DashboardSuccessView extends change_View
 	 */
 	public function _execute($context, $request)
 	{
-		$this->setTemplateName('Compatibility', K::HTML);
+		$this->setTemplateName('Compatibility', 'html');
 		$this->setAttribute('contents', $request->getAttribute('contents'));
 	}
 }

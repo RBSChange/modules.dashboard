@@ -8,7 +8,7 @@ class dashboard_SaveContentAction extends change_JSONAction
 	public function _execute($context, $request)
 	{
 		// Save the page content get as XML string from the page editor :
-		$user = $this->getDocumentService()->getDocumentInstance($request->getParameter(K::COMPONENT_ID_ACCESSOR));
+		$user = $this->getDocumentService()->getDocumentInstance($request->getParameter(change_Request::DOCUMENT_ID));
 		if ($request->hasParameter('content'))
 		{
 			$content = self::normalizeContent($request->getParameter('content'));
