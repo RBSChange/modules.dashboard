@@ -21,7 +21,7 @@ class dashboard_BlockShortcutAction extends website_BlockAction
 		if ($user && $modules)
 		{
 			$ms = ModuleService::getInstance();
-			$ps = f_permission_PermissionService::getInstance();
+			$ps = change_PermissionService::getInstance();
 			$fullAccess = $user->getIsroot();
 			$modules = explode(',', $modules);			
 			foreach ($modules as $moduleName)
