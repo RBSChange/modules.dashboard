@@ -2,7 +2,7 @@
 /**
  * @package modules.dashboard
  */
-class commands_dashboard_AddBlock extends commands_AbstractChangeCommand
+class commands_dashboard_AddBlock extends c_ChangescriptCommand
 {
 	/**
 	 * @return String
