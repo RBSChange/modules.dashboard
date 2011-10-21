@@ -3,9 +3,9 @@ class dashboard_EditContentSuccessView extends change_View
 {
 	/**
 	 * @param change_Request $request
-	 * @return users_persistentdocument_backenduser
+	 * @return users_persistentdocument_user
 	 */
-	private function getBackEndUser($request)
+	private function getUser($request)
 	{
 		 return $request->getAttribute('document');
 	}
@@ -16,8 +16,8 @@ class dashboard_EditContentSuccessView extends change_View
 	 */
     public function _execute($context, $request)
     {
-    	$backEndUser = $this->getBackEndUser($request);
-    	$document = dashboard_DashboardService::getInstance()->getTemporaryPageFromUser($backEndUser);    
+    	$user = $this->getUser($request);
+    	$document = dashboard_DashboardService::getInstance()->getTemporaryPageFromUser($user);    
     	$pageContent = website_PageService::getInstance()->getContentForEdition($document);
     	
     	$this->setTemplateName('Dashboard-EditContent-Success', 'xul');
@@ -38,10 +38,10 @@ class dashboard_EditContentSuccessView extends change_View
 		$jss->registerScript('modules.dashboard.lib.js.editcontent');
 		$this->setAttribute('scriptInclusion', $jss->executeInline('xul'));
 		
-        $this->setAttribute('PAGEID', $backEndUser->getId());
+        $this->setAttribute('PAGEID', $user->getId());
         $this->setAttribute('PAGELANG', RequestContext::getInstance()->getLang());
        	$this->setAttribute('PAGEVERSION', -1);
         $this->setAttribute('PAGEPATH', "");
-        $this->setAttribute('pageName', f_util_StringUtils::quoteDouble($backEndUser->getFullname()));
+        $this->setAttribute('pageName', f_util_StringUtils::quoteDouble($user->getLabel()));
     }
 }

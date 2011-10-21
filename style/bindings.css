@@ -1,0 +1,3 @@
+profile[name="dashboard"]{
+	-moz-binding: url(binding:modules.dashboard.cDashboardModule#cDashboardProfile);
+}

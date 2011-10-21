@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rights>
-	<actions />
-	<roles>	
-		<role name="Admin">
-			<permission name="*" />
-		</role>
-	</roles>
+  <actions>
+    <document name="dashboardprofile"/>
+  </actions>
+  <roles>
+    <role name="Admin">
+      <permission name="*"/>
+    </role>
+  </roles>
 </rights>

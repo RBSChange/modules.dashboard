@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.dashboard.bo.useractionlogger" lcid="fr_FR">
+  <key id="savecontent-user">Mise à jour du tableau de bord de {documentlabel}</key>
+  <key id="log-savecontent-user">Mise à jour du tableau de bord</key>
+</i18n>

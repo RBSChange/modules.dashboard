@@ -57,12 +57,13 @@ class dashboard_DashboardService
 	}
 	
 	/**
-	 * @param users_persistentdocument_backenduser $user
+	 * @param users_persistentdocument_user $user
 	 * @return website_persistentdocument_page
 	 */
 	public function getTemporaryPageFromUser($user)
 	{
-    	$content = $user->getDashboardcontent();
+		$profile = dashboard_DashboardprofileService::getInstance()->getByAccessorId($user->getId());
+    	$content = ($profile !== null) ? $profile->getDashboardcontent() : null;
     	if (f_util_StringUtils::isEmpty($content))
     	{
     		$content = $this->getDefaultContent();

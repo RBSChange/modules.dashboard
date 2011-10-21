@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bindings xmlns="http://www.mozilla.org/xbl" xmlns:xbl="http://www.mozilla.org/xbl"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">	
+	
+	<binding id="cDashboardProfile">
+		<resources>
+			<stylesheet src="modules.uixul.cFieldsGroup" />
+		</resources>
+		<content>
+			<xul:groupbox flex="1">
+				<xul:caption label="${transui:m.dashboard.document.dashboardprofile.document-name,attr,ucf}"/>
+				<xul:grid flex="1">
+					<xul:columns>
+						<xul:column/>
+						<xul:column flex="1"/>
+					</xul:columns>
+					<xul:rows>
+						<xul:row anonid="row_toolbarActionView">
+							<xul:clabel id="users_dashboardprofile_toolbarActionView_label" control="users_dashboardprofile_toolbarActionView" 
+								value="${transui:m.uixul.bo.dialog.user-pref-toolbaractionview,attr,lab,ucf}">
+							</xul:clabel>
+							<xul:cfield name="toolbarActionView" id="users_dashboardprofile_toolbarActionView" anonid="field_toolbarActionView" 
+								fieldtype="dropdownlist" hidehelp="true" emptylabel="">
+								<xul:clistitem label="${transui:m.uixul.bo.dialog.user-pref-toolbaractionview-button,ucf,attr}" value="button" />
+								<xul:clistitem label="${transui:m.uixul.bo.dialog.user-pref-toolbaractionview-menu,ucf,attr}" value="menu" />
+							</xul:cfield>
+						</xul:row>
+						
+						<xul:row anonid="row_documentEditorDefaultPanel">
+							<xul:clabel id="users_dashboardprofile_documentEditorDefaultPanel_label" control="users_dashboardprofile_documentEditorDefaultPanel" 
+								value="${transui:m.uixul.bo.dialog.user-pref-documenteditordefaultpanel,attr,lab,ucf}">
+							</xul:clabel>
+							<xul:cfield name="documentEditorDefaultPanel" id="users_dashboardprofile_documentEditorDefaultPanel" anonid="field_documentEditorDefaultPanel" 
+								fieldtype="dropdownlist" hidehelp="true" emptylabel="">
+						        <xul:clistitem label="${transui:m.uixul.bo.doceditor.tab.resume,ucf,attr}" value="resume" />
+				                <xul:clistitem label="${transui:m.uixul.bo.doceditor.tab.properties,ucf,attr}" value="properties" />
+				                <xul:clistitem label="${transui:m.uixul.bo.doceditor.tab.localization,ucf,attr}" value="localization" />
+				                <xul:clistitem label="${transui:m.uixul.bo.doceditor.tab.history,ucf,attr}" value="history" />
+							</xul:cfield>
+						</xul:row>	
+						
+						<xul:row anonid="row_documenteditorHelp">
+							<xul:clabel id="users_dashboardprofile_documenteditorHelp_label" control="users_dashboardprofile_documenteditorHelp" 
+								value="${transui:m.uixul.bo.dialog.user-pref-documenteditorhelp,attr,lab,ucf}">
+							</xul:clabel>
+							<xul:cfield name="documenteditorHelp" id="users_dashboardprofile_documenteditorHelp" anonid="field_documenteditorHelp" 
+								fieldtype="dropdownlist" hidehelp="true" emptylabel="">
+				                <xul:clistitem label="${transui:m.uixul.bo.dialog.user-pref-documenteditorhelp-open,ucf,attr}" value="open" />
+				                <xul:clistitem label="${transui:m.uixul.bo.dialog.user-pref-documenteditorhelp-hidden,ucf,attr}" value="hidden" />
+				                <xul:clistitem label="${transui:m.uixul.bo.dialog.user-pref-documenteditorhelp-visible,ucf,attr}" value="visible" />								
+							</xul:cfield>
+						</xul:row>	
+						
+						<xul:row anonid="row_useLeftTreeDblClick">
+							<xul:clabel id="users_dashboardprofile_useLeftTreeDblClick_label" control="users_dashboardprofile_useLeftTreeDblClick" 
+								value="${transui:m.uixul.bo.dialog.user-pref-uselefttreedblclick,attr,lab,ucf}">
+							</xul:clabel>
+							<xul:cfield name="useLeftTreeDblClick" id="users_dashboardprofile_useLeftTreeDblClick" anonid="field_useLeftTreeDblClick" 
+								fieldtype="boolean" hidehelp="true">								
+							</xul:cfield>
+						</xul:row>						
+					</xul:rows>
+				</xul:grid>
+				<children />
+			</xul:groupbox>			
+		</content>
+		
+		<implementation>
+			<field name="mFields" />
+			<field name="mId" />
+			
+			<constructor><![CDATA[
+				this.mFields = null;
+				this.mId = null;
+				wCore.debug('cDashboardProfile.constructor');
+				this.parentNode.registerProfile(this);
+			]]></constructor>
+			
+			<method name="getElementByAnonId">
+				<parameter name="anonId" />
+				<body><![CDATA[
+					return document.getAnonymousElementByAttribute(this, "anonid", anonId);
+				]]></body>
+			</method>
+
+			<property name="fields" readonly="true">
+				<getter><![CDATA[
+					if (this.mFields == null)
+					{
+						var fieldsNames = ["toolbarActionView", "documentEditorDefaultPanel", "documenteditorHelp", "useLeftTreeDblClick"];
+						this.mFields = {};
+						var field = null;
+						var name = null;
+						for (var i = 0; i < fieldsNames.length; i++)
+						{
+							name = fieldsNames[i];
+							field = this.getElementByAnonId('field_' + name);
+							this.mFields[name] = field;
+						}
+					}
+					return this.mFields;
+				]]></getter>
+			</property>	
+								
+			<method name="setValues">
+				<parameter name="values" />
+				<body><![CDATA[
+					this.mId = values.id;
+					var fields = this.fields;
+					var field = null;				
+					for (var name in fields)
+					{
+						fields[name].setInitialValue((name in values) ? values[name] : '');
+					}
+				]]></body>
+			</method>
+			
+			<method name="getValues">
+				<parameter name="values" />
+				<body><![CDATA[
+					var values = {"id" : this.mId};
+					var fields = this.fields;
+					var field = null;
+					for (var name in fields)
+					{
+						if (fields[name].modified)
+						{
+							var val = fields[name].value;
+							values[name] = (val === '') ?  null : val;
+						}
+					}
+					return values;
+				]]></body>
+			</method>							
+		</implementation>
+	</binding>
+</bindings>

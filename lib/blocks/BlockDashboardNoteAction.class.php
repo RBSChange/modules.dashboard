@@ -19,10 +19,16 @@ class dashboard_BlockDashboardNoteAction extends website_BlockAction
 			return website_BlockView::DUMMY;
 		}
 		
-		$user = users_UserService::getInstance()->getCurrentBackEndUser();
-		if ($user !== null && $user->hasMeta('modules.dashboard.noteContent'))
+		$user = users_UserService::getInstance()->getCurrentUser();
+		$profile = dashboard_DashboardprofileService::getInstance()->getByAccessorId($user->getId());
+		$noteContent = null;
+		if ($profile)
 		{
-			$request->setAttribute('noteContent', $user->getMeta('modules.dashboard.noteContent'));
+			$noteContent = $profile->getNoteContent();
+			if ($noteContent != null)
+			{
+				$request->setAttribute('noteContent', $noteContent);
+			}
 		}
 		return website_BlockView::SUCCESS;
 	}

@@ -68,7 +68,7 @@ class dashboard_ViewBlockAction extends change_Action
 	}
 
 	/**
-	 * @return users_persistentdocument_backenduser
+	 * @return users_persistentdocument_user
 	 */
 	protected function getBackEndUser()
 	{

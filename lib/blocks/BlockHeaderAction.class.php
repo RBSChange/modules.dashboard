@@ -26,10 +26,10 @@ class dashboard_BlockHeaderAction extends website_BlockAction
 	}
 	
 	/**
-	 * @return users_persistentdocument_backenduser
+	 * @return users_persistentdocument_user
 	 */
 	private function getBackEndUser()
 	{
-		return users_BackenduserService::getInstance()->getCurrentBackEndUser();
+		return users_UserService::getInstance()->getCurrentBackEndUser();
 	}
 }
