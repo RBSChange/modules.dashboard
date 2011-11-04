@@ -1,41 +1,40 @@
 <?xml version="1.0"?>
 <blocks>
-	<block type="modules_dashboard_shortcut" section="top" icon="modules" dashboard="true" labeli18n="m.dashboard.bo.blocks.shortcut">
-		<parameters>
-			<parameter name="blocktitle" type="String" default-value="Modules" />
-			<parameter name="modules" type="String" fieldtype="checklist" list-id="modules_dashboard/availablemodules" min-occurs="1" max-occurs="-1" />
-		</parameters>
-	</block>
-	<block type="modules_dashboard_packagesversion" section="top" icon="modules" dashboard="true" labeli18n="m.dashboard.bo.blocks.packagesversion"/>
-	<block type="modules_dashboard_browsersversion" section="top" icon="browser" dashboard="true" labeli18n="m.dashboard.bo.blocks.browsersversion"/>
-	<block type="modules_dashboard_tools" section="top" icon="admin" dashboard="true" labeli18n="m.dashboard.bo.blocks.tools">
-		<parameters>
-			<parameter name="showawstatslink" type="Boolean" default-value="false" />
-			<parameter name="showgoogleanalyticslink" type="Boolean" default-value="true" />
-		</parameters>
-	</block>
-	<block type="modules_dashboard_DashboardRssReader" section="top" icon="rss" dashboard="true">
-		<parameters>
-			<parameter name="feedurl" type="String" min-occurs="1" />
-			<parameter name="maxitemcount" type="Integer" default-value="10" min-occurs="1">
-				<constraints>min:1;max:50</constraints>
-			</parameter>
-		</parameters>
-	</block>
-	
-	<block type="modules_dashboard_header"  hidden="true" dashboard="true"/>
-
-	<block type="modules_dashboard_moduledefault" icon="earth_view" hidden="true" dashboard="true"
-		labeli18n="m.dashboard.bo.blocks.moduledefault">
-		<parameters>
-			<parameter name="package" type="String" list-id="modules_dashboard/moduledashboard" />
-		</parameters>
-	</block>
-	<block type="modules_dashboard_DashboardNote" icon="note" dashboard="true">
-		<parameters>
-			<parameter name="fieldrows" type="Integer" default-value="5" min-occurs="1">
-				<constraints>min:2;max:20</constraints>
-			</parameter>
-		</parameters>
-	</block>
+  <block type="modules_dashboard_shortcut" section="top" icon="modules" dashboard="true" labeli18n="m.dashboard.bo.blocks.shortcut">
+    <parameters>
+      <parameter name="blocktitle" type="String" default-value="Modules"/>
+      <parameter name="modules" type="String" fieldtype="checklist" list-id="modules_dashboard/availablemodules" min-occurs="1" max-occurs="-1"/>
+    </parameters>
+  </block>
+  <block type="modules_dashboard_packagesversion" section="top" icon="modules" dashboard="true" labeli18n="m.dashboard.bo.blocks.packagesversion"/>
+  <block type="modules_dashboard_browsersversion" section="top" icon="browser" dashboard="true" labeli18n="m.dashboard.bo.blocks.browsersversion"/>
+  <block type="modules_dashboard_tools" section="top" icon="admin" dashboard="true" labeli18n="m.dashboard.bo.blocks.tools">
+    <parameters>
+      <parameter name="showawstatslink" type="Boolean" default-value="false"/>
+      <parameter name="showgoogleanalyticslink" type="Boolean" default-value="true"/>
+    </parameters>
+  </block>
+  <block type="modules_dashboard_DashboardRssReader" section="top" icon="rss" dashboard="true">
+    <parameters>
+      <parameter name="feedurl" type="String" min-occurs="1"/>
+      <parameter name="maxitemcount" type="Integer" default-value="10" min-occurs="1">
+        <constraint name="min" min="1"/>
+        <constraint name="max" max="50"/>
+      </parameter>
+    </parameters>
+  </block>
+  <block type="modules_dashboard_header" hidden="true" dashboard="true"/>
+  <block type="modules_dashboard_moduledefault" icon="earth_view" hidden="true" dashboard="true" labeli18n="m.dashboard.bo.blocks.moduledefault">
+    <parameters>
+      <parameter name="package" type="String" list-id="modules_dashboard/moduledashboard"/>
+    </parameters>
+  </block>
+  <block type="modules_dashboard_DashboardNote" icon="note" dashboard="true">
+    <parameters>
+      <parameter name="fieldrows" type="Integer" default-value="5" min-occurs="1">
+        <constraint name="min" min="2"/>
+        <constraint name="max" max="20"/>
+      </parameter>
+    </parameters>
+  </block>
 </blocks>
