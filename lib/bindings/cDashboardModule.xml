@@ -18,7 +18,7 @@
 					<xul:rows>
 						<xul:row anonid="row_toolbarActionView">
 							<xul:clabel id="users_dashboardprofile_toolbarActionView_label" control="users_dashboardprofile_toolbarActionView" 
-								value="${transui:m.uixul.bo.dialog.user-pref-toolbaractionview,attr,lab,ucf}">
+								value="${transui:m.uixul.bo.dialog.user-pref-toolbaractionview,attr,ucf}">
 							</xul:clabel>
 							<xul:cfield name="toolbarActionView" id="users_dashboardprofile_toolbarActionView" anonid="field_toolbarActionView" 
 								fieldtype="dropdownlist" hidehelp="true" emptylabel="">
@@ -29,7 +29,7 @@
 						
 						<xul:row anonid="row_documentEditorDefaultPanel">
 							<xul:clabel id="users_dashboardprofile_documentEditorDefaultPanel_label" control="users_dashboardprofile_documentEditorDefaultPanel" 
-								value="${transui:m.uixul.bo.dialog.user-pref-documenteditordefaultpanel,attr,lab,ucf}">
+								value="${transui:m.uixul.bo.dialog.user-pref-documenteditordefaultpanel,attr,ucf}">
 							</xul:clabel>
 							<xul:cfield name="documentEditorDefaultPanel" id="users_dashboardprofile_documentEditorDefaultPanel" anonid="field_documentEditorDefaultPanel" 
 								fieldtype="dropdownlist" hidehelp="true" emptylabel="">
@@ -42,7 +42,7 @@
 						
 						<xul:row anonid="row_documenteditorHelp">
 							<xul:clabel id="users_dashboardprofile_documenteditorHelp_label" control="users_dashboardprofile_documenteditorHelp" 
-								value="${transui:m.uixul.bo.dialog.user-pref-documenteditorhelp,attr,lab,ucf}">
+								value="${transui:m.uixul.bo.dialog.user-pref-documenteditorhelp,attr,ucf}">
 							</xul:clabel>
 							<xul:cfield name="documenteditorHelp" id="users_dashboardprofile_documenteditorHelp" anonid="field_documenteditorHelp" 
 								fieldtype="dropdownlist" hidehelp="true" emptylabel="">
@@ -54,7 +54,7 @@
 						
 						<xul:row anonid="row_useLeftTreeDblClick">
 							<xul:clabel id="users_dashboardprofile_useLeftTreeDblClick_label" control="users_dashboardprofile_useLeftTreeDblClick" 
-								value="${transui:m.uixul.bo.dialog.user-pref-uselefttreedblclick,attr,lab,ucf}">
+								value="${transui:m.uixul.bo.dialog.user-pref-uselefttreedblclick,attr,ucf}">
 							</xul:clabel>
 							<xul:cfield name="useLeftTreeDblClick" id="users_dashboardprofile_useLeftTreeDblClick" anonid="field_useLeftTreeDblClick" 
 								fieldtype="boolean" hidehelp="true">								

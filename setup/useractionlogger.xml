@@ -2,4 +2,5 @@
 <script>
   <binding fileName="modules/useractionlogger/persistentdocument/import/useractionlogger_binding.xml"/>
   <actiondef modulename="dashboard" actionname="savecontent.user" label="m.dashboard.bo.useractionlogger.savecontent-user"/>
+  <actiondef modulename="dashboard" actionname="savecontent.user" label="m.dashboard.bo.useractionlogger.savecontent-user"/>
 </script>

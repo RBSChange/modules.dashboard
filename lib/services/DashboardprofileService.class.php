@@ -52,14 +52,15 @@ class dashboard_DashboardprofileService extends users_ProfileService
 	{
 		return $this->pp->createQuery('modules_dashboard/dashboardprofile', false);
 	}
-	
+
 	/**
 	 * @param integer $accessorId
+	 * @param boolean $required
 	 * @return dashboard_persistentdocument_dashboardprofile || null
 	 */
-	public function getByAccessorId($accessorId)
+	public function getByAccessorId($accessorId, $required = false)
 	{
-		return parent::getByAccessorId($accessorId);
+		return parent::getByAccessorId($accessorId, $required);
 	}
 	
 	/**
