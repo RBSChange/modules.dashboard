@@ -5,8 +5,8 @@
 	<toolbar>
 	</toolbar>
 	<actions>
-		<action name="refreshDashboard" single="true" icon="refresh" label="&amp;modules.uixul.bo.general.Refresh;" />
-		<action name="closeModuleAction" single="true" icon="error" label="&amp;modules.uixul.bo.general.buttons.Close-module;" />
-		<action name="editDashboard" single="true" icon="edit" label="&amp;modules.dashboard.bo.general.Edit;" />
+		<action name="refreshDashboard" single="true" icon="refresh" labeli18n="m.uixul.bo.general.Refresh" />
+		<action name="closeModuleAction" single="true" icon="error" labeli18n="m.uixul.bo.general.buttons.Close-module" />
+		<action name="editDashboard" single="true" icon="edit" labeli18n="m.dashboard.bo.general.Edit" />
 	</actions>
 </perspective>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.dashboard.bo.blocks.moduledefault" lcid="en_GB">
   <key id="package">module</key>
+  <key id="package-help">Choose the module from which your widget originates.</key>
 </i18n>
