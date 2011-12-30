@@ -7,7 +7,7 @@
 		</parameters>
 	</block>
 	<block type="modules_dashboard_packagesversion" section="top" icon="modules" dashboard="true" label="&amp;modules.dashboard.bo.blocks.Packagesversion;" />
-	<block type="modules_dashboard_browsersversion" section="top" icon="browser" dashboard="true" label="&amp;modules.dashboard.bo.blocks.Browsersversion;" />
+
 	<block type="modules_dashboard_tools" section="top" icon="admin" dashboard="true" label="&amp;modules.dashboard.bo.blocks.Tools;">
 		<parameters>
 			<parameter name="showawstatslink" type="Boolean" default-value="false" />
@@ -24,7 +24,8 @@
 	</block>
 	
 	<block type="modules_dashboard_header"  hidden="true" dashboard="true"/>
-
+	<block type="modules_dashboard_browsersversion"  hidden="true" section="top" icon="browser" dashboard="true" label="&amp;modules.dashboard.bo.blocks.Browsersversion;" />
+	
 	<!-- Deprecated. -->
 	<!-- 
 	<block type="empty" dashboard="true" display="" icon="selection" label="&amp;modules.uixul.bo.layout.EmptyBlock;" />

@@ -10,7 +10,7 @@
 					<change:block type="modules_dashboard_shortcut" __modules="website,media" />
 				</change:row>
 				<change:row>
-					<change:block type="modules_dashboard_browsersversion"/>
+					<change:block type="modules_updater_Resume"/>
 				</change:row>
 				<change:row>
 					<change:block type="modules_dashboard_tools"/>
