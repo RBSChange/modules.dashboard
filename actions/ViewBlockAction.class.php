@@ -7,32 +7,38 @@ class dashboard_ViewBlockAction extends f_action_BaseAction
 	 */
 	public function _execute($context, $request)
 	{
-		$user = $this->getBackEndUser();	
-		if (!$user) {return View::NONE;}
+		$user = $this->getBackEndUser();
+		if (!$user)
+		{
+			return View::NONE;
+		}
 		$blocType = $request->getModuleParameter('dashboard', 'type');
 		$package = explode('_', $blocType);
 		$moduleName = $package[0];
 		
 		$displayParam = $request->getModuleParameter('dashboard', 'display');
-		if (!is_array($displayParam)) {$displayParam = array();}
+		if (!is_array($displayParam))
+		{
+			$displayParam = array();
+		}
 		
 		$blockClassName = $moduleName . '_Block' . ucfirst($package[1]) . 'Action';
 		$blockClass = new ReflectionClass($blockClassName);
 		try
 		{
-			$moduleParams = $request->getParameter($moduleName.'Param', array());
+			$moduleParams = $request->getParameter($moduleName . 'Param', array());
 			$moduleParams['refresh'] = true;
-			$request->setParameter($moduleName.'Param', $moduleParams);
+			$request->setParameter($moduleName . 'Param', $moduleParams);
 			
 			$blockController = website_BlockController::getInstance();
 			$page = dashboard_DashboardService::getInstance()->getTemporaryPageFromUser($user);
 			$blockController->setPage($page);
 			$blockController->getContext()->setAttribute(website_BlockAction::BLOCK_BO_MODE_ATTRIBUTE, false);
-			$blockInstance = $blockClass->newInstance();			
+			$blockInstance = $blockClass->newInstance();
 			foreach ($displayParam as $name => $value)
 			{
 				$blockInstance->setConfigurationParameter($name, $value);
-			}	
+			}
 			$blockController->process($blockInstance, f_mvc_HTTPRequest::getInstance());
 			$blockContent = $blockController->getResponse()->getWriter()->getContent();
 			
@@ -50,7 +56,7 @@ class dashboard_ViewBlockAction extends f_action_BaseAction
 		}
 		
 		controller_ChangeController::setNoCache();
-		header('Content-Type' . ':' . 'text/xml');	
+		header('Content-Type' . ':' . 'text/xml');
 		$this->write($title, $icon, $blockContent, $openModule);
 		return View::NONE;
 	}
@@ -60,7 +66,7 @@ class dashboard_ViewBlockAction extends f_action_BaseAction
 	 */
 	protected function getBackEndUser()
 	{
-		 return users_UserService::getInstance()->getCurrentBackEndUser();
+		return users_UserService::getInstance()->getCurrentBackEndUser();
 	}
 	
 	/**
@@ -81,17 +87,19 @@ class dashboard_ViewBlockAction extends f_action_BaseAction
 		$output->writeElement('title', $title);
 		
 		$output->startElement('icon');
-		$output->writeAttribute('image', $icon);	
+		$output->writeAttribute('image', $icon);
 		$output->endElement(); //icon
 		
-		$output->startElement('content');
-                $output->text($content);
-                $output->endElement(); //content
 
+		$output->startElement('content');
+		$output->startCdata();
+		$output->text($content);
+		$output->endCdata();
 		$output->endElement(); //content
 		
+
 		$output->endElement(); //dashboard-widget
 		$output->endDocument(); //DOCUMENT
-		echo $output->outputMemory(true);		
+		echo $output->outputMemory(true);
 	}
 }
