@@ -70,22 +70,22 @@ class dashboard_DashboardService
 		$page = website_PageService::getInstance()->getNewDocumentInstance();
 		$page->setLang(RequestContext::getInstance()->getUILang());
 		$page->setLabel('Temporary Dashboard Page');
-		$page->setTemplate('tplNewDashboard');
+		$page->setTemplate('defaultTemplate');
     	$page->setContent($content);
     	
-    	$template = theme_PagetemplateService::getInstance()->getByCodeName('tplNewDashboard');
+    	$template = theme_PagetemplateService::getInstance()->getByCodeName('defaultTemplate');
     	if (!$template)
     	{
     		$template = theme_PagetemplateService::getInstance()->getNewDocumentInstance();
-    		$template->setLabel('tplNewDashboard');
-    		$template->setCodename('tplNewDashboard');
+    		$template->setLabel('defaultTemplate');
+    		$template->setCodename('defaultTemplate');
     		$template->setDoctype('XHTML 1.0 Strict');
-    		$template->setProjectpath('modules/dashboard/templates/tplNewDashboard.all.all.xul');
+    		$template->setProjectpath('modules/dashboard/templates/defaultTemplate.xml');
     		$template->setUseprojectcss(false);
     		$template->setUseprojectjs(false);
     		
     		$template->setCssscreen('modules.generic.frontoffice,modules.generic.richtext,modules.dashboard.dashboard');
-    		$template->setJs('modules.dashboard.lib.js.dashboard,modules.uixul.lib.dashboardext,modules.uixul.lib.wCore,modules.dashboard.lib.js.dashboardwidget');
+    		$template->setJs('modules.dashboard.lib.js.dashboard,modules.uixul.lib.wCore,modules.dashboard.lib.js.dashboardwidget');
     		$template->save();
     	}
 		return $page;
