@@ -4,8 +4,8 @@
   <key id="tree-root-name">Dashboard</key>
   <key id="system-folder-name">Dashboard</key>
   <key id="dashboard">Home</key>
-  <key id="dashboardof-voyel">Welcome </key>
-  <key id="dashboardof">Welcome </key>
+  <key id="dashboardof-voyel">Welcome {name}</key>
+  <key id="dashboardof">Welcome {name}</key>
   <key id="edit">Edit</key>
   <key id="no-feed-url-define">Feed URL undefined</key>
   <key id="feed-error">error on the feed</key>

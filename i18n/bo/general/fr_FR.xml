@@ -4,8 +4,8 @@
   <key id="tree-root-name">Tableau de bord</key>
   <key id="system-folder-name">Tableau de bord</key>
   <key id="dashboard">Accueil</key>
-  <key id="dashboardof-voyel">Bienvenue </key>
-  <key id="dashboardof">Bienvenue </key>
+  <key id="dashboardof-voyel">Bienvenue {name}</key>
+  <key id="dashboardof">Bienvenue {name}</key>
   <key id="edit">Editer</key>
   <key id="no-feed-url-define">URL du flux non définie</key>
   <key id="feed-error">erreur sur le flux</key>

@@ -13,13 +13,13 @@ class dashboard_BlockHeaderAction extends website_BlockAction
 	{		
 		$request->setAttribute('isRoot', $this->getBackEndUser()->getIsroot());	
 		$userName = $this->getBackEndUser()->getFullname();
-		if (preg_match('/^[aeyuio]/i', f_util_StringUtils::strip_accents($userName)))
+		if (preg_match('/^[aeyuio]/i', f_util_StringUtils::stripAccents($userName)))
 		{
-			$request->setAttribute('username', f_Locale::translateUI("&modules.dashboard.bo.general.DashboardOf-voyel;") . $userName);
+			$request->setAttribute('username', LocaleService::getInstance()->trans("m.dashboard.bo.general.dashboardof-voyel", array('ucf', 'attr'), array('name' => $userName)));
 		}
 		else
 		{
-			$request->setAttribute('username', f_Locale::translateUI("&modules.dashboard.bo.general.DashboardOf;") . $userName);
+			$request->setAttribute('username', LocaleService::getInstance()->trans("m.dashboard.bo.general.dashboardof", array('ucf', 'attr'), array('name' => $userName)));
 		}
 		
 		return website_BlockView::SUCCESS;

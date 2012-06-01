@@ -4,7 +4,7 @@
   <key id="tree-root-name">Startseite</key>
   <key id="system-folder-name">Startseite</key>
   <key id="dashboard">Startseite</key>
-  <key id="dashboardof-voyel">Willkommen</key>
-  <key id="dashboardof">Willkommen</key>
+  <key id="dashboardof-voyel">Willkommen {name}</key>
+  <key id="dashboardof">Willkommen {name}</key>
   <key id="edit">Bearbeiten</key>
 </i18n>
