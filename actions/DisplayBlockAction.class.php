@@ -21,7 +21,7 @@ class dashboard_DisplayBlockAction extends change_JSONAction
 			$blockClassName = block_BlockService::getInstance()->getBlockActionClassNameByType($blocType);
 			if ($blockClassName === null)
 			{
-				throw new Exception("Block $bt not found");
+				throw new Exception("Block $blocType not found");
 			}
 			$blockClass = new ReflectionClass($blockClassName);
 			

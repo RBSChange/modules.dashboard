@@ -71,17 +71,17 @@ class dashboard_DashboardService
 		$page = website_PageService::getInstance()->getNewDocumentInstance();
 		$page->setLang(RequestContext::getInstance()->getUILang());
 		$page->setLabel('Temporary Dashboard Page');
-		$page->setTemplate('tplNewDashboard');
+		$page->setTemplate('defaultTemplate');
     	$page->setContent($content);
     	
     	$template = theme_PagetemplateService::getInstance()->getByCodeName('tplNewDashboard');
     	if (!$template)
     	{
     		$template = theme_PagetemplateService::getInstance()->getNewDocumentInstance();
-    		$template->setLabel('tplNewDashboard');
-    		$template->setCodename('tplNewDashboard');
+    		$template->setLabel('defaultTemplate');
+    		$template->setCodename('defaultTemplate');
     		$template->setDoctype('XHTML 1.0 Strict');
-    		$template->setProjectpath('modules/dashboard/templates/tplNewDashboard.all.all.xul');
+    		$template->setProjectpath('modules/dashboard/templates/defaultTemplate.xml');
     		$template->setUseprojectcss(false);
     		$template->setUseprojectjs(false);
     		
