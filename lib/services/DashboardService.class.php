@@ -74,7 +74,7 @@ class dashboard_DashboardService
 		$page->setTemplate('defaultTemplate');
     	$page->setContent($content);
     	
-    	$template = theme_PagetemplateService::getInstance()->getByCodeName('tplNewDashboard');
+    	$template = theme_PagetemplateService::getInstance()->getByCodeName('defaultTemplate');
     	if (!$template)
     	{
     		$template = theme_PagetemplateService::getInstance()->getNewDocumentInstance();
