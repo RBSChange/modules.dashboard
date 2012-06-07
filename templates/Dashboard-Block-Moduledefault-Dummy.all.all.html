@@ -1,9 +1,9 @@
 <div class="dashboard-widget ${widget/package}">
 	<div class="title-bar">
-		<div change:include="module 'dashboard'; template 'Dashboard-Inc-DefaultButtonsBar'; type 'html'" />
+		<div change:include="module 'dashboard'; template 'Dashboard-Inc-DefaultButtonsBar'; type 'html'"></div>
 		<img src="${icon}"/> ${widget/title}
 	</div>
 	<div class="content-block">
-		<div class="content" tal:content="transui:m.dashboard.dashboard.dummycontent,ucf">...</div>
+		<div class="content">${transui:m.dashboard.dashboard.dummycontent,ucf}</div>
 	</div>
 </div>

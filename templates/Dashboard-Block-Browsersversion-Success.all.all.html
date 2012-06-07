@@ -1,18 +1,18 @@
 <div class="dashboard-widget" static="true">
 	<div class="title-bar">
-		<div change:include="module 'dashboard'; template 'Dashboard-Inc-MiniButtonsBar'; type 'html'" />
-		<img change:img="icon/small/browser.png" /> <tal:block tal:content="transui:m.dashboard.bo.blocks.browsersversion,ucf" />
+		<div change:include="module 'dashboard'; template 'Dashboard-Inc-MiniButtonsBar'; type 'html'"></div>
+		<img change:img="icon/small/browser.png" /> ${transui:m.dashboard.bo.blocks.browsersversion,ucf}
 	</div>
 	<div class="content-block" tal:condition="not: browsers">
-	   <strong tal:content="transui:m.dashboard.bo.blocks.unknowversion,ucf">Les versions ne sont pas définies pour ce projet</strong>
+	   <strong>${transui:m.dashboard.bo.blocks.unknowversion,ucf}</strong>
 	</div>
 	<div class="content-block" tal:condition="browsers">
-		<div id="wrongVersion" style="display: none;" tal:content="transui:m.dashboard.bo.blocks.wrongversion,ucf">(Version courante NAVVERSION non validée)</div>
-		<strong tal:content="transui:m.dashboard.bo.blocks.backofficetitle,ucf">Pour l'interface d'administration</strong>
-		<strong id="currentVersion" style="color: red" />
+		<div id="wrongVersion" style="display: none;">${transui:m.dashboard.bo.blocks.wrongversion,ucf}</div>
+		<strong>${transui:m.dashboard.bo.blocks.backofficetitle,ucf}</strong>
+		<strong id="currentVersion" style="color: red"></strong>
 	    <ul class="dash-module-small">
 			<li tal:repeat="versions browsers/backoffice">
-				<span tal:replace="repeat/versions/key" /> :
+				${repeat/versions/key} :
 				<tal:block tal:repeat="version versions">
 					<strong id="ver_${version}">${version}</strong><span tal:condition="not: repeat/version/end">, </span> 
 				</tal:block>
@@ -34,10 +34,10 @@
 			}
 		</script>
 		
-		<strong tal:content="transui:m.dashboard.bo.blocks.frontofficetitle,ucf">Pour le site web</strong>
+		<strong>${transui:m.dashboard.bo.blocks.frontofficetitle,ucf}</strong>
 	    <ul class="dash-module-small">
 			<li tal:repeat="versions browsers/frontoffice">
-				<span tal:replace="repeat/versions/key" /> : 
+				${repeat/versions/key} : 
 				<tal:block tal:repeat="version versions">
 					<strong>${version}</strong><span tal:condition="not: repeat/version/end">, </span> 
 				</tal:block>
