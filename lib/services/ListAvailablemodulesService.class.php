@@ -2,7 +2,7 @@
 /**
  * @package module.dashboard
  */
-class dashboard_ListAvailablemodulesService extends BaseService
+class dashboard_ListAvailablemodulesService extends change_BaseService
 {
 	/**
 	 * @var dashboard_ListAvailableModulesService

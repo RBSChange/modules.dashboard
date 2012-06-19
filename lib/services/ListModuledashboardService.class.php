@@ -1,5 +1,5 @@
 <?php
-class dashboard_ListModuledashboardService extends BaseService 
+class dashboard_ListModuledashboardService extends change_BaseService 
 	implements list_ListItemsService
 {
 	/**
