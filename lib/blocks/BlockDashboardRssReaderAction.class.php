@@ -121,8 +121,8 @@ class dashboard_BlockDashboardRssReaderAction extends dashboard_BlockDashboardAc
 	}
 	
 	/**
-	 * @param String $string
-	 * @return String
+	 * @param string $string
+	 * @return string
 	 */
 	private function parseRSSDate($string)
 	{

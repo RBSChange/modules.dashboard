@@ -1,28 +1,12 @@
 <?php
 /**
- * @package module.dashboard
+ * @package modules.dashboard
+ * @method dashboard_ListAvailablemodulesService getInstance()
  */
-class dashboard_ListAvailablemodulesService extends change_BaseService
+class dashboard_ListAvailablemodulesService extends change_BaseService implements list_ListItemsService
 {
 	/**
-	 * @var dashboard_ListAvailableModulesService
-	 */
-	private static $instance;
-
-	/**
-	 * @return dashboard_ListAvailableModulesService
-	 */
-	public static function getInstance()
-	{
-		if (is_null(self::$instance))
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
-
-	/**
-	 * @return array<list_Item>
+	 * @return list_Item[]
 	 */
 	public final function getItems()
 	{
@@ -51,7 +35,7 @@ class dashboard_ListAvailablemodulesService extends change_BaseService
 	}
 
 	/**
-	 * @return String
+	 * @return string
 	 */
 	public final function getDefaultId()
 	{

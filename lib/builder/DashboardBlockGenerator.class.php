@@ -4,10 +4,10 @@ class dashboard_DashboardBlockGenerator extends builder_BlockGenerator
 	/**
 	 * Generate a block : blocks.xml, blockAction, success template, tag, locales.
 	 *
-	 * @param String $blockName
-	 * @param Boolean $genTag
-	 * @param String $icon
-	 * @return String the path of the generated PHP file
+	 * @param string $blockName
+	 * @param boolean $genTag
+	 * @param string $icon
+	 * @return string the path of the generated PHP file
 	 */
 	public function generateBlock($blockName, $genTag, $icon)
 	{
@@ -20,7 +20,7 @@ class dashboard_DashboardBlockGenerator extends builder_BlockGenerator
 	}
 	
 	/**
-	 * @return String[] [$folder, $tplName]
+	 * @return string[] [$folder, $tplName]
 	 */
 	protected function getBlockTemplateInfo()
 	{
@@ -28,7 +28,7 @@ class dashboard_DashboardBlockGenerator extends builder_BlockGenerator
 	}
 	
 	/**
-	 * @return String[] [$folder, $tplName]
+	 * @return string[] [$folder, $tplName]
 	 */
 	protected function getBlockSuccessViewInfo()
 	{

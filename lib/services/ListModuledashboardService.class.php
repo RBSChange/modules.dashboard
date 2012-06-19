@@ -1,30 +1,12 @@
 <?php
-class dashboard_ListModuledashboardService extends change_BaseService 
-	implements list_ListItemsService
+/**
+ * @package modules.dashboard
+ * @method dashboard_ListAvailablemodulesService getInstance()
+ */
+class dashboard_ListModuledashboardService extends change_BaseService implements list_ListItemsService
 {
 	/**
-	 * @var dashboard_ListModuledashboardService
-	 */
-	private static $instance;
-
-
-	/**
-	 * @return dashboard_ListModuledashboardService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
-
-
-	/**
-	 * Returns an array of available templates for the website module.
-	 *
-	 * @return array
+	 * @return list_Item[]
 	 */
 	public function getItems()
 	{

@@ -1,32 +1,12 @@
 <?php
-class dashboard_DashboardService
+/**
+ * @package modules.dashboard
+ * @method dashboard_DashboardService getInstance()
+ */
+class dashboard_DashboardService extends change_BaseService
 {
-	/**
-	 * @var dashboard_DashboardService Unique instance of dashboard_DashboardService
-	 */
-	private static $instance = null;
-
 	private $defaultContent = null;
 	
-	/**
-	  * Private constructor for singleton instance.
-	  */
-	private function __construct()
-	{
-	}
-	
-	/**
-	 * @return dashboard_DashboardService Unique instance of dashboard_DashboardService
-	 */
-	public static function getInstance()
-	{
-		if ( is_null(self::$instance) )
-		{
-			self::$instance = new dashboard_DashboardService();
-		}
-		return self::$instance;
-	}
-
 	/**
 	 * @return array<String> The names of the modules that have a Dashboard action.
 	 */
@@ -63,32 +43,32 @@ class dashboard_DashboardService
 	public function getTemporaryPageFromUser($user)
 	{
 		$profile = dashboard_DashboardprofileService::getInstance()->getByAccessorId($user->getId());
-    	$content = ($profile !== null) ? $profile->getDashboardcontent() : null;
-    	if (f_util_StringUtils::isEmpty($content))
-    	{
-    		$content = $this->getDefaultContent();
-    	}
+		$content = ($profile !== null) ? $profile->getDashboardcontent() : null;
+		if (f_util_StringUtils::isEmpty($content))
+		{
+			$content = $this->getDefaultContent();
+		}
 		$page = website_PageService::getInstance()->getNewDocumentInstance();
 		$page->setLang(RequestContext::getInstance()->getUILang());
 		$page->setLabel('Temporary Dashboard Page');
 		$page->setTemplate('defaultTemplate');
-    	$page->setContent($content);
-    	
-    	$template = theme_PagetemplateService::getInstance()->getByCodeName('defaultTemplate');
-    	if (!$template)
-    	{
-    		$template = theme_PagetemplateService::getInstance()->getNewDocumentInstance();
-    		$template->setLabel('defaultTemplate');
-    		$template->setCodename('defaultTemplate');
-    		$template->setDoctype('XHTML 1.0 Strict');
-    		$template->setProjectpath('modules/dashboard/templates/defaultTemplate.xml');
-    		$template->setUseprojectcss(false);
-    		$template->setUseprojectjs(false);
-    		
-    		$template->setCssscreen('modules.generic.frontoffice,modules.generic.richtext,modules.dashboard.dashboard');
-    		$template->setJs('modules.dashboard.lib.js.dashboard,modules.uixul.lib.wCore,modules.dashboard.lib.js.dashboardwidget');
-    		$template->save();
-    	}
+		$page->setContent($content);
+		
+		$template = theme_PagetemplateService::getInstance()->getByCodeName('defaultTemplate');
+		if (!$template)
+		{
+			$template = theme_PagetemplateService::getInstance()->getNewDocumentInstance();
+			$template->setLabel('defaultTemplate');
+			$template->setCodename('defaultTemplate');
+			$template->setDoctype('XHTML 1.0 Strict');
+			$template->setProjectpath('modules/dashboard/templates/defaultTemplate.xml');
+			$template->setUseprojectcss(false);
+			$template->setUseprojectjs(false);
+			
+			$template->setCssscreen('modules.generic.frontoffice,modules.generic.richtext,modules.dashboard.dashboard');
+			$template->setJs('modules.dashboard.lib.js.dashboard,modules.uixul.lib.wCore,modules.dashboard.lib.js.dashboardwidget');
+			$template->save();
+		}
 		return $page;
 	}
 }

@@ -7,20 +7,20 @@ class dashboard_BaseModuleAction extends change_Action
 	 */
 	public final function _execute($context, $request)
 	{
-        try
-        {   
-            $title = $this->getTitle();
-            $icon = MediaHelper::getIcon($this->getIcon(), MediaHelper::SMALL);
-            $content = $this->getContent($context, $request);  
-        }
-        catch (Exception $e)
-        {  
-        	Framework::exception($e);     
-        	$title = 'Error';
-        	$icon = MediaHelper::getIcon("document", MediaHelper::SMALL);
-        	$content = $e->getMessage();
-        }
-        
+		try
+		{   
+			$title = $this->getTitle();
+			$icon = MediaHelper::getIcon($this->getIcon(), MediaHelper::SMALL);
+			$content = $this->getContent($context, $request);  
+		}
+		catch (Exception $e)
+		{  
+			Framework::exception($e);	 
+			$title = 'Error';
+			$icon = MediaHelper::getIcon("document", MediaHelper::SMALL);
+			$content = $e->getMessage();
+		}
+		
 		header('Content-Type' . ':' . 'text/xml');		
 		$this->write($title, $icon, $content);
 		return change_View::NONE;

@@ -4,7 +4,7 @@ class dashboard_BlockShortcutAction extends website_BlockAction
 	/**
 	 * @param f_mvc_Request $request
 	 * @param f_mvc_Response $response
-	 * @return String
+	 * @return string
 	 */
 	function execute($request, $response)
 	{	
@@ -13,7 +13,7 @@ class dashboard_BlockShortcutAction extends website_BlockAction
 		
 		// Bloc title.
 		$title = $this->getConfiguration()->getBlocktitle();
-		$title = $title ? $title : LocaleService::getInstance()->transBO('m.uixul.bo.general.modules', array('ucf'));
+		$title = $title ? $title : LocaleService::getInstance()->trans('m.uixul.bo.general.modules', array('ucf'));
 		$request->setAttribute('title', $title);
 		
 		// Modules.

@@ -1,28 +1,10 @@
 <?php
 /**
- * dashboard_DashboardprofileService
  * @package modules.dashboard
+ * @method dashboard_DashboardprofileService getInstance()
  */
 class dashboard_DashboardprofileService extends users_ProfileService
 {
-	/**
-	 * @var dashboard_DashboardprofileService
-	 */
-	private static $instance;
-
-	/**
-	 * @return dashboard_DashboardprofileService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
-
-	
 	/**
 	 * @return dashboard_persistentdocument_dashboardprofile
 	 */
@@ -39,7 +21,7 @@ class dashboard_DashboardprofileService extends users_ProfileService
 	 */
 	public function createQuery()
 	{
-		return $this->pp->createQuery('modules_dashboard/dashboardprofile');
+		return $this->getPersistentProvider()->createQuery('modules_dashboard/dashboardprofile');
 	}
 	
 	/**
@@ -50,7 +32,7 @@ class dashboard_DashboardprofileService extends users_ProfileService
 	 */
 	public function createStrictQuery()
 	{
-		return $this->pp->createQuery('modules_dashboard/dashboardprofile', false);
+		return $this->getPersistentProvider()->createQuery('modules_dashboard/dashboardprofile', false);
 	}
 
 	/**
