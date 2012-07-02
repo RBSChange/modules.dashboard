@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.dashboard.bo.blocks.shortcut" lcid="en_GB">
-  <key id="blocktitle">block title</key>
-  <key id="modules">modules</key>
-  <key id="blocktitle-help">Title to display for this block.</key>
-  <key id="modules-help">Select modules to display.</key>
+	<key id="blocktitle">block title</key>
+	<key id="modules">modules</key>
+	<key id="blocktitle-help">Title to display for this block.</key>
+	<key id="modules-help">Select modules to display.</key>
 </i18n>

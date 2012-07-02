@@ -7,22 +7,22 @@
 			{
 				var wrpcontent = new XPCNativeWrapper(this.getElementByAnonId('dashboard_frame').contentWindow).wrappedJSObject;
 	   			wrpcontent.Dashboard.refresh();
-		    }
-		    catch (e)
-		    {
-		    	wCore.error('refresh', [], e);
-		    }
+			}
+			catch (e)
+			{
+				wCore.error('refresh', [], e);
+			}
 		]]></body>
 	</action>
 
 	<action name="editDashboard">
 		<parameter name="listWidget" />
 		<body><![CDATA[
-	    	wCore.debug('dashboard.editDashboard');
-	    	var oldUrl = this.getElementByAnonId('designDasboardFrame').getAttribute("src");
-	    	
-	    	var editUrl = wToolkit.buildXulURL('dashboard', 'EditContent', {lang: Context.W_LANG, uilang: Context.W_UILANG}, true);
-	    	var deck = this.getElementByAnonId('pageDeck');
+			wCore.debug('dashboard.editDashboard');
+			var oldUrl = this.getElementByAnonId('designDasboardFrame').getAttribute("src");
+			
+			var editUrl = wToolkit.buildXulURL('dashboard', 'EditContent', {lang: Context.W_LANG, uilang: Context.W_UILANG}, true);
+			var deck = this.getElementByAnonId('pageDeck');
 			if (editUrl != oldUrl)
 			{
 				deck.selectedIndex = 3;
@@ -47,11 +47,11 @@
 				deck.selectedIndex = 0;
 				wCore.debug('dashboard.onModuleInit selectedIndex');
 			
-		    }
-		    catch (e)
-		    {
-		    	wCore.error('onModuleInit', [], e);
-		    }
+			}
+			catch (e)
+			{
+				wCore.error('onModuleInit', [], e);
+			}
 		]]></body>
 	</action>
 	
@@ -69,7 +69,7 @@
 		
 		if (oldUrl != url)
 		{	
-			wCore.debug('dashboard.setDashboardUrl setSrc' + url);	    
+			wCore.debug('dashboard.setDashboardUrl setSrc' + url);		
 		   	this.getElementByAnonId('dashboard_frame').setAttribute("src", url);
 		}
 		]]></body>

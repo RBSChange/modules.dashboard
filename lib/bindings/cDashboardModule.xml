@@ -9,7 +9,7 @@
 		</resources>
 		<content>
 			<xul:groupbox flex="1">
-				<xul:caption label="${transui:m.dashboard.document.dashboardprofile.document-name,attr,ucf}"/>
+				<xul:caption label="${trans:m.dashboard.document.dashboardprofile.document-name,attr,ucf}"/>
 				<xul:grid flex="1">
 					<xul:columns>
 						<xul:column/>
@@ -18,43 +18,43 @@
 					<xul:rows>
 						<xul:row anonid="row_toolbarActionView">
 							<xul:clabel id="users_dashboardprofile_toolbarActionView_label" control="users_dashboardprofile_toolbarActionView" 
-								value="${transui:m.uixul.bo.dialog.user-pref-toolbaractionview,attr,ucf}">
+								value="${trans:m.uixul.bo.dialog.user-pref-toolbaractionview,attr,ucf}">
 							</xul:clabel>
 							<xul:cfield name="toolbarActionView" id="users_dashboardprofile_toolbarActionView" anonid="field_toolbarActionView" 
 								fieldtype="dropdownlist" hidehelp="true" emptylabel="">
-								<xul:clistitem label="${transui:m.uixul.bo.dialog.user-pref-toolbaractionview-button,ucf,attr}" value="button" />
-								<xul:clistitem label="${transui:m.uixul.bo.dialog.user-pref-toolbaractionview-menu,ucf,attr}" value="menu" />
+								<xul:clistitem label="${trans:m.uixul.bo.dialog.user-pref-toolbaractionview-button,ucf,attr}" value="button" />
+								<xul:clistitem label="${trans:m.uixul.bo.dialog.user-pref-toolbaractionview-menu,ucf,attr}" value="menu" />
 							</xul:cfield>
 						</xul:row>
 						
 						<xul:row anonid="row_documentEditorDefaultPanel">
 							<xul:clabel id="users_dashboardprofile_documentEditorDefaultPanel_label" control="users_dashboardprofile_documentEditorDefaultPanel" 
-								value="${transui:m.uixul.bo.dialog.user-pref-documenteditordefaultpanel,attr,ucf}">
+								value="${trans:m.uixul.bo.dialog.user-pref-documenteditordefaultpanel,attr,ucf}">
 							</xul:clabel>
 							<xul:cfield name="documentEditorDefaultPanel" id="users_dashboardprofile_documentEditorDefaultPanel" anonid="field_documentEditorDefaultPanel" 
 								fieldtype="dropdownlist" hidehelp="true" emptylabel="">
-						        <xul:clistitem label="${transui:m.uixul.bo.doceditor.tab.resume,ucf,attr}" value="resume" />
-				                <xul:clistitem label="${transui:m.uixul.bo.doceditor.tab.properties,ucf,attr}" value="properties" />
-				                <xul:clistitem label="${transui:m.uixul.bo.doceditor.tab.localization,ucf,attr}" value="localization" />
-				                <xul:clistitem label="${transui:m.uixul.bo.doceditor.tab.history,ucf,attr}" value="history" />
+								<xul:clistitem label="${trans:m.uixul.bo.doceditor.tab.resume,ucf,attr}" value="resume" />
+								<xul:clistitem label="${trans:m.uixul.bo.doceditor.tab.properties,ucf,attr}" value="properties" />
+								<xul:clistitem label="${trans:m.uixul.bo.doceditor.tab.localization,ucf,attr}" value="localization" />
+								<xul:clistitem label="${trans:m.uixul.bo.doceditor.tab.history,ucf,attr}" value="history" />
 							</xul:cfield>
 						</xul:row>	
 						
 						<xul:row anonid="row_documenteditorHelp">
 							<xul:clabel id="users_dashboardprofile_documenteditorHelp_label" control="users_dashboardprofile_documenteditorHelp" 
-								value="${transui:m.uixul.bo.dialog.user-pref-documenteditorhelp,attr,ucf}">
+								value="${trans:m.uixul.bo.dialog.user-pref-documenteditorhelp,attr,ucf}">
 							</xul:clabel>
 							<xul:cfield name="documenteditorHelp" id="users_dashboardprofile_documenteditorHelp" anonid="field_documenteditorHelp" 
 								fieldtype="dropdownlist" hidehelp="true" emptylabel="">
-				                <xul:clistitem label="${transui:m.uixul.bo.dialog.user-pref-documenteditorhelp-open,ucf,attr}" value="open" />
-				                <xul:clistitem label="${transui:m.uixul.bo.dialog.user-pref-documenteditorhelp-hidden,ucf,attr}" value="hidden" />
-				                <xul:clistitem label="${transui:m.uixul.bo.dialog.user-pref-documenteditorhelp-visible,ucf,attr}" value="visible" />								
+								<xul:clistitem label="${trans:m.uixul.bo.dialog.user-pref-documenteditorhelp-open,ucf,attr}" value="open" />
+								<xul:clistitem label="${trans:m.uixul.bo.dialog.user-pref-documenteditorhelp-hidden,ucf,attr}" value="hidden" />
+								<xul:clistitem label="${trans:m.uixul.bo.dialog.user-pref-documenteditorhelp-visible,ucf,attr}" value="visible" />								
 							</xul:cfield>
 						</xul:row>	
 						
 						<xul:row anonid="row_useLeftTreeDblClick">
 							<xul:clabel id="users_dashboardprofile_useLeftTreeDblClick_label" control="users_dashboardprofile_useLeftTreeDblClick" 
-								value="${transui:m.uixul.bo.dialog.user-pref-uselefttreedblclick,attr,ucf}">
+								value="${trans:m.uixul.bo.dialog.user-pref-uselefttreedblclick,attr,ucf}">
 							</xul:clabel>
 							<xul:cfield name="useLeftTreeDblClick" id="users_dashboardprofile_useLeftTreeDblClick" anonid="field_useLeftTreeDblClick" 
 								fieldtype="boolean" hidehelp="true">								

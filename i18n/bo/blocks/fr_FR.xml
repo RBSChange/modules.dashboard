@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.dashboard.bo.blocks" lcid="fr_FR">
-  <key id="tools">outils</key>
-  <key id="packagesversion">version des modules</key>
-  <key id="browsersversion">navigateurs</key>
-  <key id="unknowversion">les versions ne sont pas définies pour ce projet</key>
-  <key id="backofficetitle">pour l'interface d'administration</key>
-  <key id="frontofficetitle">pour le site web</key>
-  <key id="wrongversion">(version courante NAVVERSION non validée)</key>
-  <key id="shortcut">raccoucis</key>
-  <key id="moduledefault">widget par defaut d'un module</key>
+	<key id="tools">outils</key>
+	<key id="packagesversion">version des modules</key>
+	<key id="browsersversion">navigateurs</key>
+	<key id="unknowversion">les versions ne sont pas définies pour ce projet</key>
+	<key id="backofficetitle">pour l'interface d'administration</key>
+	<key id="frontofficetitle">pour le site web</key>
+	<key id="wrongversion">(version courante NAVVERSION non validée)</key>
+	<key id="shortcut">raccoucis</key>
+	<key id="moduledefault">widget par defaut d'un module</key>
 </i18n>

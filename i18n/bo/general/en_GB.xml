@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.dashboard.bo.general" lcid="en_GB">
-  <key id="module-name">Home</key>
-  <key id="tree-root-name">Dashboard</key>
-  <key id="system-folder-name">Dashboard</key>
-  <key id="dashboard">Home</key>
-  <key id="dashboardof-voyel">Welcome {name}</key>
-  <key id="dashboardof">Welcome {name}</key>
-  <key id="edit">Edit</key>
-  <key id="no-feed-url-define">Feed URL undefined</key>
-  <key id="feed-error">error on the feed</key>
+	<key id="module-name">Home</key>
+	<key id="tree-root-name">Dashboard</key>
+	<key id="system-folder-name">Dashboard</key>
+	<key id="dashboard">Home</key>
+	<key id="dashboardof-voyel">Welcome {name}</key>
+	<key id="dashboardof">Welcome {name}</key>
+	<key id="edit">Edit</key>
+	<key id="no-feed-url-define">Feed URL undefined</key>
+	<key id="feed-error">error on the feed</key>
 </i18n>

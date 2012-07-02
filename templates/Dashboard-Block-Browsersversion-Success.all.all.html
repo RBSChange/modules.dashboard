@@ -10,7 +10,7 @@
 		<div id="wrongVersion" style="display: none;">${transui:m.dashboard.bo.blocks.wrongversion,ucf}</div>
 		<strong>${transui:m.dashboard.bo.blocks.backofficetitle,ucf}</strong>
 		<strong id="currentVersion" style="color: red"></strong>
-	    <ul class="dash-module-small">
+		<ul class="dash-module-small">
 			<li tal:repeat="versions browsers/backoffice">
 				${repeat/versions/key} :
 				<tal:block tal:repeat="version versions">
@@ -35,7 +35,7 @@
 		</script>
 		
 		<strong>${transui:m.dashboard.bo.blocks.frontofficetitle,ucf}</strong>
-	    <ul class="dash-module-small">
+		<ul class="dash-module-small">
 			<li tal:repeat="versions browsers/frontoffice">
 				${repeat/versions/key} : 
 				<tal:block tal:repeat="version versions">

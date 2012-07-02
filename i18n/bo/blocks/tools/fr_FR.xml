@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.dashboard.bo.blocks.tools" lcid="fr_FR">
-  <key id="edit">éditer</key>
-  <key id="edit-locale-for">éditer les localisations pour</key>
-  <key id="google-analytics">Statistiques Google Analytics</key>
-  <key id="awstats">Statistiques AWStats</key>
-  <key id="showawstatslink">afficher le lien AWStats</key>
-  <key id="showawstatslink-help">afficher le lien AWStats</key>
-  <key id="showgoogleanalyticslink">afficher le lien Google Analytics</key>
-  <key id="showgoogleanalyticslink-help">afficher le lien Google Analytics</key>
+	<key id="edit">éditer</key>
+	<key id="edit-locale-for">éditer les localisations pour</key>
+	<key id="google-analytics">Statistiques Google Analytics</key>
+	<key id="awstats">Statistiques AWStats</key>
+	<key id="showawstatslink">afficher le lien AWStats</key>
+	<key id="showawstatslink-help">afficher le lien AWStats</key>
+	<key id="showgoogleanalyticslink">afficher le lien Google Analytics</key>
+	<key id="showgoogleanalyticslink-help">afficher le lien Google Analytics</key>
 </i18n>

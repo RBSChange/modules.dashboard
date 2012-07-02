@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.dashboard.bo.blocks.header" lcid="en_GB">
-  <key id="edit">edit</key>
-  <key id="refresh">refresh</key>
+	<key id="edit">edit</key>
+	<key id="refresh">refresh</key>
 </i18n>

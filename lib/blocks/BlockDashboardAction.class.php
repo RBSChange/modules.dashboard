@@ -18,7 +18,7 @@ abstract class dashboard_BlockDashboardAction extends website_BlockAction
 	 */
 	public function getTitle()
 	{
-		return f_Locale::translateUI($this->getBlockInfo()->getLabel());
+		return LocaleService::getInstance()->trans($this->getBlockInfo()->getLabel());
 	}
 	
 	/**

@@ -37,7 +37,7 @@ class dashboard_DashboardBlockGenerator extends builder_BlockGenerator
 	
 	protected function _getTpl($folder, $tpl, $blockName, $icon = null, $additionalParams = null)
 	{
-		$templateDir = f_util_FileUtils::buildWebeditPath('modules', 'dashboard', 'templates', 'builder', $folder);
+		$templateDir = f_util_FileUtils::buildProjectPath('modules', 'dashboard', 'templates', 'builder', $folder);
 		$generator = new builder_Generator();
 		$generator->setTemplateDir($templateDir);
 		$generator->assign('author', $this->author);

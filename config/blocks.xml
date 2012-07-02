@@ -3,7 +3,7 @@
 	<block type="modules_dashboard_shortcut" section="top" icon="modules" dashboard="true" labeli18n="m.dashboard.bo.blocks.shortcut">
 		<parameters>
 			<parameter name="blocktitle" type="String" default-value="Modules" />
-			<parameter name="modules" type="String" fieldtype="checklist" list-id="modules_dashboard/availablemodules" min-occurs="1" max-occurs="-1" />
+			<parameter name="modules" type="String" fieldtype="checklist" min-occurs="1" max-occurs="-1" from-list="modules_dashboard/availablemodules" />
 		</parameters>
 	</block>
 	<block type="modules_dashboard_packagesversion" section="top" icon="modules" dashboard="true" labeli18n="m.dashboard.bo.blocks.packagesversion" />
@@ -26,7 +26,7 @@
 	<block type="modules_dashboard_header" hidden="true" dashboard="true" />
 	<block type="modules_dashboard_moduledefault" icon="earth_view" hidden="true" dashboard="true" labeli18n="m.dashboard.bo.blocks.moduledefault">
 		<parameters>
-			<parameter name="package" type="String" list-id="modules_dashboard/moduledashboard" />
+			<parameter name="package" type="String" from-list="modules_dashboard/moduledashboard" />
 		</parameters>
 	</block>
 	<block type="modules_dashboard_DashboardNote" icon="note" dashboard="true">

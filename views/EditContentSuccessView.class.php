@@ -2,7 +2,7 @@
 class dashboard_EditContentSuccessView extends change_View
 {
 	/**
-	 * @param change_Request $request        	
+	 * @param change_Request $request			
 	 * @return users_persistentdocument_user
 	 */
 	private function getUser($request)
@@ -11,8 +11,8 @@ class dashboard_EditContentSuccessView extends change_View
 	}
 	
 	/**
-	 * @param change_Context $context        	
-	 * @param change_Request $request        	
+	 * @param change_Context $context			
+	 * @param change_Request $request			
 	 */
 	public function _execute($context, $request)
 	{

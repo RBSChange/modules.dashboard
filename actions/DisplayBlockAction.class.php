@@ -46,7 +46,7 @@ class dashboard_DisplayBlockAction extends change_JSONAction
 			{
 				try
 				{
-					$blockContent = "<strong>" . f_Locale::translate(block_BlockService::getInstance()->getBlockLabelFromBlockName($blocType)) . "</strong>";
+					$blockContent = "<strong>" . LocaleService::getInstance()->trans(block_BlockService::getInstance()->getBlockLabelFromBlockName($blocType)) . "</strong>";
 				}
 				catch (Exception $e)
 				{

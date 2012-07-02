@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.dashboard.bo.blocks.tools" lcid="en_GB">
-  <key id="awstats">AWStats statistics</key>
-  <key id="edit">edit</key>
-  <key id="edit-locale-for">edit the Translations for</key>
-  <key id="google-analytics">Google Analytics statistics</key>
-  <key id="showawstatslink">show AWStats link</key>
-  <key id="showawstatslink-help">show AWStats link</key>
-  <key id="showgoogleanalyticslink">show Google Analytics link</key>
-  <key id="showgoogleanalyticslink-help">show Google Analytics link</key>
+	<key id="awstats">AWStats statistics</key>
+	<key id="edit">edit</key>
+	<key id="edit-locale-for">edit the Translations for</key>
+	<key id="google-analytics">Google Analytics statistics</key>
+	<key id="showawstatslink">show AWStats link</key>
+	<key id="showawstatslink-help">show AWStats link</key>
+	<key id="showgoogleanalyticslink">show Google Analytics link</key>
+	<key id="showgoogleanalyticslink-help">show Google Analytics link</key>
 </i18n>

@@ -35,7 +35,7 @@ class dashboard_BlockDashboardRssReaderAction extends dashboard_BlockDashboardAc
 		$feedurl = $this->getConfiguration()->getFeedurl();
 		if (f_util_StringUtils::isEmpty($feedurl))
 		{
-			$this->title = f_Locale::translateUI('&modules.dashboard.bo.general.No-Feed-URL-define;');
+			$this->title = LocaleService::getInstance()->trans('m.dashboard.bo.general.no-feed-url-define', array('ucf'));
 		}
 		else if ($request->hasParameter('refresh'))
 		{
@@ -77,13 +77,13 @@ class dashboard_BlockDashboardRssReaderAction extends dashboard_BlockDashboardAc
 				}
 				else
 				{
-					$this->title = f_Locale::translateUI('&modules.dashboard.bo.general.Feed-error;') . ': ' . $this->getConfiguration()->getFeedurl();
+					$this->title = LocaleService::getInstance()->trans('m.dashboard.bo.general.feed-error', array('ucf')) . ': ' . $this->getConfiguration()->getFeedurl();
 				}
 			}
 			catch (Exception $e)
 			{
 				Framework::exception($e);
-				$this->title = f_Locale::translateUI('&modules.dashboard.bo.general.Feed-error;') . ': ' . $this->getConfiguration()->getFeedurl();
+				$this->title = LocaleService::getInstance()->trans('m.dashboard.bo.general.feed-error', array('ucf')) . ': ' . $this->getConfiguration()->getFeedurl();
 			}
 		}
 		
