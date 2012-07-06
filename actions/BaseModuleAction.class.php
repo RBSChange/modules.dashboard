@@ -61,16 +61,10 @@ class dashboard_BaseModuleAction extends change_Action
 	}
 	
 	/**
-	 * @param string $package
-	 * @param string $name
-	 * @param string $mimeType
-	 * @return TemplateObject
+	 * @param string $title
+	 * @param string $icon
+	 * @param string $content
 	 */
-	protected final function createNewTemplate($package, $name, $mimeType = 'xml')
-	{
-		return TemplateLoader::getInstance()->setPackageName($package)->setMimeContentType($mimeType)->load($name);
-	}
-	
 	private function write($title, $icon, $content)
 	{
 		$output = new XMLWriter();
@@ -91,5 +85,16 @@ class dashboard_BaseModuleAction extends change_Action
 		$output->endElement(); //dashboard-widget
 		$output->endDocument(); //DOCUMENT
 		echo $output->outputMemory(true);		
+	}
+	
+	// Deprecated.
+	
+	/**
+	 * @deprected use change_TemplateLoader directly
+	 */
+	protected final function createNewTemplate($package, $name, $mimeType = 'xml')
+	{
+		list($ptype, $pname) = explode('_', $package);
+		return change_TemplateLoader::getNewInstance()->setExtension($mimeType)->load($ptype, $pname, 'template', $name);
 	}
 }

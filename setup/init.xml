@@ -3,7 +3,7 @@
 	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml" />
 	<systemfolder module="list" relatedmodule="dashboard">
-		<dynamiclist listid="modules_dashboard/moduledashboard" label="Liste des widgets standard" description="Liste des widgets standard"></dynamiclist>
-		<dynamiclist listid="modules_dashboard/availablemodules" label="Liste modules accessibles" description="Liste modules accessibles en backoffice par l'utilisateur courant."></dynamiclist>
+		<dynamiclist listid="modules_dashboard/moduledashboard" label="Liste des widgets standard" description="Liste des widgets standard" />
+		<dynamiclist listid="modules_dashboard/availablemodules" label="Liste modules accessibles" description="Liste modules accessibles en backoffice par l'utilisateur courant." />
 	</systemfolder>
 </script>

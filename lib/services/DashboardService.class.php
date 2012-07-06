@@ -5,6 +5,9 @@
  */
 class dashboard_DashboardService extends change_BaseService
 {
+	/**
+	 * @var string
+	 */
 	private $defaultContent = null;
 	
 	/**
@@ -24,13 +27,14 @@ class dashboard_DashboardService extends change_BaseService
 		return $widgetArray;
 	}
 	
+	/**
+	 * @return string
+	 */
 	public function getDefaultContent()
 	{
 		if ($this->defaultContent === null)
 		{
-			$filename = FileResolver::getInstance()->setPackageName('modules_dashboard')
-				->setDirectory('templates')
-				->getPath('defaultdashbord.xml');
+			$filename = change_FileResolver::getNewInstance()->getPath('modules', 'dashboard', 'templates', 'defaultdashbord.xml');
 			$this->defaultContent = file_get_contents($filename);
 		}
 		return $this->defaultContent;
