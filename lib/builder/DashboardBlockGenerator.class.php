@@ -15,7 +15,7 @@ class dashboard_DashboardBlockGenerator extends builder_BlockGenerator
 		$actionPath = $this->_generateBlockAction($blockName, $icon);
 
 		$this->_generateBlocksxml($blockName, $icon);
-		block_BlockService::getInstance()->compileBlocksForPackage("modules_".$this->name);
+		block_BlockService::getInstance()->compileBlocks();
 		return $actionPath;
 	}
 	
