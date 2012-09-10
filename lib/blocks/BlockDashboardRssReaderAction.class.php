@@ -45,13 +45,13 @@ class dashboard_BlockDashboardRssReaderAction extends dashboard_BlockDashboardAc
 				session_commit();
 				$client = change_HttpClientService::getInstance()->getNewHttpClient();
 				$adapter = $client->getAdapter();
-				if ($adapter instanceof Zend_Http_Client_Adapter_Curl)
+				if ($adapter instanceof \Zend\Http\Client\Adapter\Curl)
 				{
 					$adapter->setCurlOption(CURLOPT_REFERER, LinkHelper::getUIChromeActionLink('uixul', 'Admin') . '&fqdn=' . urlencode(Framework::getUIDefaultHost()));
 				}
 				$client->setUri($this->getConfiguration()->getFeedurl());
-				$rssRequest = $client->request();
-				$xmlRSS = $rssRequest->getBody();
+				$rssResponse = $client->send();
+				$xmlRSS = $rssResponse->getBody();
 				session_start();
 				$doc = f_util_DOMUtils::fromString($xmlRSS);			
 				$chanel = $doc->getElementsByTagName('channel')->item(0);
