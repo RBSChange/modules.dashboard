@@ -24,7 +24,7 @@ class dashboard_ListAvailablemodulesService extends BaseService
 	/**
 	 * @return array<list_Item>
 	 */
-	public final function getItems()
+	public function getItems()
 	{
 		$items = array();
 		
@@ -53,7 +53,7 @@ class dashboard_ListAvailablemodulesService extends BaseService
 	/**
 	 * @return String
 	 */
-	public final function getDefaultId()
+	public function getDefaultId()
 	{
 		return 'website';
 	}
